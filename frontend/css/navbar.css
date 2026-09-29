@@ -1,0 +1,307 @@
+/*
+===========================================================
+ArogyaConnect Top Navigation
+===========================================================
+*/
+
+
+.top-navbar {
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    left: var(--sidebar-width);
+
+    z-index: 900;
+
+    height:
+        var(--header-height);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 28px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    backdrop-filter:
+        blur(10px);
+
+    transition:
+        left
+        var(--transition);
+}
+
+
+/* =======================================================
+   LEFT
+======================================================= */
+
+.navbar-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-width: 0;
+}
+
+
+.mobile-menu-btn {
+    display: none;
+
+    width: 40px;
+
+    height: 40px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        var(--foreground);
+
+    background:
+        var(--secondary);
+
+    border-radius:
+        var(--radius-sm);
+
+    font-size: 20px;
+}
+
+
+.mobile-menu-btn:hover {
+    background:
+        var(--border);
+}
+
+
+/* =======================================================
+   PAGE TITLE
+======================================================= */
+
+.navbar-title {
+    min-width: 0;
+}
+
+
+.navbar-title strong {
+    display: block;
+
+    overflow: hidden;
+
+    color:
+        var(--foreground);
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+}
+
+
+.navbar-title span {
+    display: block;
+
+    color:
+        var(--muted-foreground);
+
+    font-size: 12px;
+}
+
+
+/* =======================================================
+   RIGHT
+======================================================= */
+
+.navbar-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+/* =======================================================
+   USER
+======================================================= */
+
+.navbar-user {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-left: 12px;
+
+    border-left:
+        1px solid
+        var(--border);
+}
+
+
+.navbar-user-info {
+    text-align: right;
+}
+
+
+.navbar-user-name {
+    display: block;
+
+    color:
+        var(--foreground);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.navbar-user-role {
+    display: block;
+
+    margin-top: 1px;
+
+    color:
+        var(--muted-foreground);
+
+    font-size: 11px;
+}
+
+
+.user-avatar {
+    width: 38px;
+
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        var(--primary-dark);
+
+    background:
+        var(--primary-light);
+
+    border:
+        1px solid
+        #99f6e4;
+
+    border-radius:
+        50%;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+
+/* =======================================================
+   NOTIFICATION
+======================================================= */
+
+.navbar-notification {
+    position: relative;
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        var(--muted-foreground);
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius-sm);
+
+    transition:
+        background
+        var(--transition-fast),
+        color
+        var(--transition-fast);
+}
+
+
+.navbar-notification:hover {
+    color:
+        var(--primary);
+
+    background:
+        var(--primary-light);
+}
+
+
+.navbar-notification-badge {
+    position: absolute;
+
+    top: 4px;
+
+    right: 4px;
+
+    min-width: 16px;
+
+    height: 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0 4px;
+
+    color: #ffffff;
+
+    background:
+        var(--danger);
+
+    border-radius:
+        999px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}

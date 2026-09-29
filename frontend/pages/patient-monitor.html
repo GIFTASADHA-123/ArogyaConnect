@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Patient Monitor | ArogyaConnect</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/cards.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="../css/monitoring.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- MUST BE LAST -->
+    <link rel="stylesheet" href="../css/layout.css">
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <!-- BRAND -->
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-brand-mark">
+                A
+            </div>
+
+            <div class="sidebar-brand-text">
+
+                <strong>
+                    ArogyaConnect
+                </strong>
+
+                <span>
+                    Patient Care
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR CONTENT -->
+
+        <div class="sidebar-content">
+
+            <!-- MAIN -->
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-section-title">
+                    Main
+                </span>
+
+
+                <nav class="sidebar-nav">
+
+                    <!-- Nurse Dashboard -->
+
+                    <a
+                        href="nurse-dashboard.html"
+                        class="sidebar-nav-item"
+                        data-role="nurse"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <rect
+                                x="3"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="3"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+                        </svg>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <!-- Doctor Dashboard -->
+
+                    <a
+                        href="doctor-dashboard.html"
+                        class="sidebar-nav-item"
+                        data-role="doctor"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <rect
+                                x="3"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="3"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+                        </svg>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <!-- Patient Monitoring -->
+
+                    <a
+                        href="patient-monitor.html"
+                        class="sidebar-nav-item active"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M3 12h4l2-7 4 14 2-7h6"
+                            />
+                        </svg>
+
+                        <span>
+                            Patient Monitoring
+                        </span>
+
+                    </a>
+
+
+                    <!-- Patient History -->
+
+                    <a
+                        href="patient-history.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <rect
+                                x="5"
+                                y="3"
+                                width="14"
+                                height="18"
+                                rx="2"
+                            />
+
+                            <line
+                                x1="8"
+                                y1="8"
+                                x2="16"
+                                y2="8"
+                            />
+
+                            <line
+                                x1="8"
+                                y1="12"
+                                x2="16"
+                                y2="12"
+                            />
+
+                            <line
+                                x1="8"
+                                y1="16"
+                                x2="13"
+                                y2="16"
+                            />
+                        </svg>
+
+                        <span>
+                            Patient History
+                        </span>
+
+                    </a>
+
+
+                    <!-- Alerts -->
+
+                    <a
+                        href="alerts.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                            />
+
+                            <path
+                                d="M10 21h4"
+                            />
+                        </svg>
+
+                        <span>
+                            Alerts
+                        </span>
+
+                        <span
+                            class="sidebar-alert-count"
+                            id="alertCount"
+                            style="display:none;"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-section-title">
+                    Account
+                </span>
+
+
+                <nav class="sidebar-nav">
+
+                    <!-- Profile -->
+
+                    <a
+                        href="profile.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="4"
+                            />
+
+                            <path
+                                d="M4 21c0-4 3-7 8-7s8 3 8 7"
+                            />
+                        </svg>
+
+                        <span>
+                            Profile
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR FOOTER -->
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-staff-card">
+
+                <div
+                    class="sidebar-user-avatar"
+                    id="sidebarUserAvatar"
+                >
+                    U
+                </div>
+
+
+                <div class="sidebar-user-info">
+
+                    <strong id="sidebarUserName">
+                        User
+                    </strong>
+
+                    <span id="sidebarUserRole">
+                        Staff
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="sidebar-logout"
+                data-logout
+            >
+                <span>↪</span>
+                <span>Sign out</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MOBILE OVERLAY -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN WRAPPER
+    ====================================================== -->
+
+    <div class="main-wrapper">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="top-navbar">
+
+            <div class="navbar-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                    aria-controls="sidebar"
+                    aria-expanded="false"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <line
+                            x1="4"
+                            y1="6"
+                            x2="20"
+                            y2="6"
+                        />
+
+                        <line
+                            x1="4"
+                            y1="12"
+                            x2="20"
+                            y2="12"
+                        />
+
+                        <line
+                            x1="4"
+                            y1="18"
+                            x2="20"
+                            y2="18"
+                        />
+                    </svg>
+                </button>
+
+
+                <div class="navbar-page-title">
+                    Patient Monitoring
+                </div>
+
+            </div>
+
+
+            <div class="navbar-right">
+
+                <div class="navbar-user">
+
+                    <div
+                        class="navbar-user-avatar"
+                        id="headerUserAvatar"
+                    >
+                        U
+                    </div>
+
+
+                    <div class="navbar-user-details">
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <span id="headerUserRole">
+                            Staff
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="main-content monitoring-page">
+
+
+            <!-- PAGE HEADER -->
+
+            <section class="monitoring-header">
+
+                <div>
+
+                    <div class="page-breadcrumb">
+                        Monitoring / Patient
+                    </div>
+
+                    <h1>
+                        Live Patient Monitoring
+                    </h1>
+
+                    <p>
+                        Current clinical sensor information for the selected patient.
+                    </p>
+
+                </div>
+
+
+                <div class="monitoring-header-actions">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="backToDashboard"
+                    >
+                        ← Dashboard
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="refreshMonitor"
+                    >
+                        ↻ Refresh
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ERROR -->
+
+            <div
+                class="monitor-error"
+                id="monitorError"
+                style="display:none;"
+            >
+
+                <strong>
+                    Unable to load patient data.
+                </strong>
+
+                <span id="monitorErrorMessage">
+                    Please try again.
+                </span>
+
+            </div>
+
+
+            <!-- PATIENT SUMMARY -->
+
+            <section class="monitor-patient-card">
+
+                <div class="monitor-patient-main">
+
+                    <div
+                        class="monitor-patient-avatar"
+                        id="patientAvatar"
+                    >
+                        P
+                    </div>
+
+
+                    <div class="monitor-patient-info">
+
+                        <div class="monitor-patient-name-row">
+
+                            <h2 id="patientName">
+                                Loading patient...
+                            </h2>
+
+                            <span
+                                class="condition-badge"
+                                id="patientCondition"
+                            >
+                                --
+                            </span>
+
+                        </div>
+
+
+                        <p id="patientDetails">
+                            Loading patient details...
+                        </p>
+
+
+                        <div class="monitor-last-update">
+
+                            Last update:
+
+                            <strong id="lastUpdate">
+                                --
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="monitor-live-indicator">
+
+                    <span
+                        class="live-dot"
+                        id="monitoringStatusDot"
+                    ></span>
+
+
+                    <div>
+
+                        <strong id="monitoringStatusText">
+                            Checking...
+                        </strong>
+
+                        <span>
+                            Monitoring status
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- NO SENSOR DATA -->
+
+            <section
+                class="no-sensor-data"
+                id="noSensorData"
+                style="display:none;"
+            >
+
+                <div class="no-data-icon">
+                    —
+                </div>
+
+                <h3>
+                    No sensor data available
+                </h3>
+
+                <p>
+                    This patient does not currently have recorded sensor readings.
+                </p>
+
+            </section>
+
+
+            <!-- =================================================
+                 SENSOR CARDS
+            ================================================== -->
+
+            <section
+                class="sensor-monitor-grid"
+                id="sensorMonitorGrid"
+            >
+
+
+                <!-- TEMPERATURE -->
+
+                <article class="sensor-monitor-card temperature-card">
+
+                    <div class="sensor-card-top">
+
+                        <div class="sensor-card-icon">
+                            °C
+                        </div>
+
+                        <span
+                            class="sensor-status-badge"
+                            id="temperatureStatus"
+                        >
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div class="sensor-card-label">
+                        Temperature
+                    </div>
+
+
+                    <div class="sensor-main-value">
+
+                        <span id="temperatureValue">
+                            --
+                        </span>
+
+                        <small>
+                            °C
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FALL -->
+
+                <article class="sensor-monitor-card fall-card">
+
+                    <div class="sensor-card-top">
+
+                        <div class="sensor-card-icon">
+                            !
+                        </div>
+
+                        <span
+                            class="sensor-status-badge"
+                            id="fallStatus"
+                        >
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div class="sensor-card-label">
+                        Fall Detection
+                    </div>
+
+
+                    <div
+                        class="sensor-state-value"
+                        id="fallState"
+                    >
+                        --
+                    </div>
+
+
+                    <div class="sensor-sub-value">
+
+                        Force reading:
+
+                        <strong id="fallValue">
+                            --
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- POSITION -->
+
+                <article class="sensor-monitor-card position-card">
+
+                    <div class="sensor-card-top">
+
+                        <div class="sensor-card-icon">
+                            ↔
+                        </div>
+
+                        <span
+                            class="sensor-status-badge"
+                            id="positionStatus"
+                        >
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div class="sensor-card-label">
+                        Patient Position
+                    </div>
+
+
+                    <div
+                        class="sensor-state-value"
+                        id="positionValue"
+                    >
+                        --
+                    </div>
+
+
+                    <div class="sensor-sub-value">
+
+                        Duration:
+
+                        <strong id="positionDuration">
+                            --
+                        </strong>
+
+                    </div>
+
+                </article>
+
+
+                <!-- URINE -->
+
+                <article class="sensor-monitor-card fluid-card">
+
+                    <div class="sensor-card-top">
+
+                        <div class="sensor-card-icon">
+                            U
+                        </div>
+
+                        <span
+                            class="sensor-status-badge"
+                            id="urineStatus"
+                        >
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div class="sensor-card-label">
+                        Urine Level
+                    </div>
+
+
+                    <div class="sensor-main-value">
+
+                        <span id="urineValue">
+                            --
+                        </span>
+
+                        <small>
+                            cm
+                        </small>
+
+                    </div>
+
+
+                    <div class="sensor-sub-value">
+                        Measured distance
+                    </div>
+
+                </article>
+
+
+                <!-- IV -->
+
+                <article class="sensor-monitor-card fluid-card">
+
+                    <div class="sensor-card-top">
+
+                        <div class="sensor-card-icon">
+                            IV
+                        </div>
+
+                        <span
+                            class="sensor-status-badge"
+                            id="ivStatus"
+                        >
+                            --
+                        </span>
+
+                    </div>
+
+
+                    <div class="sensor-card-label">
+                        IV Fluid Level
+                    </div>
+
+
+                    <div class="sensor-main-value">
+
+                        <span id="ivValue">
+                            --
+                        </span>
+
+                        <small>
+                            cm
+                        </small>
+
+                    </div>
+
+
+                    <div class="sensor-sub-value">
+                        Measured distance
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 GYROSCOPE
+            ================================================== -->
+
+            <section class="monitor-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Movement Sensor
+                        </h2>
+
+                        <p>
+                            Current gyroscope X, Y and Z readings.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="gyro-grid">
+
+                    <div class="gyro-card">
+
+                        <span class="gyro-axis">
+                            X
+                        </span>
+
+                        <strong id="gyroX">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="gyro-card">
+
+                        <span class="gyro-axis">
+                            Y
+                        </span>
+
+                        <strong id="gyroY">
+                            --
+                        </strong>
+
+                    </div>
+
+
+                    <div class="gyro-card">
+
+                        <span class="gyro-axis">
+                            Z
+                        </span>
+
+                        <strong id="gyroZ">
+                            --
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 RECENT ALERTS
+            ================================================== -->
+
+            <section class="monitor-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Recent Alerts
+                        </h2>
+
+                        <p>
+                            Alerts associated with this patient.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="alerts.html"
+                        class="section-link"
+                    >
+                        View all →
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="monitor-alerts"
+                    id="monitorAlerts"
+                >
+
+                    <div class="monitor-alert-empty">
+                        Loading alerts...
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <div class="monitor-footer">
+
+                <span>
+                    Data refreshes automatically every 5 seconds.
+                </span>
+
+                <span id="currentDate">
+                    --
+                </span>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/monitoring/patient-monitor.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+/* =========================================================
+   AROGYACONNECT
+   GLOBAL DESIGN SYSTEM
+========================================================= */
+
+:root {
+    /* Typography */
+    --font-heading: "Plus Jakarta Sans", sans-serif;
+    --font-body: "Inter", sans-serif;
+
+    /* Brand */
+    --primary: #0f766e;
+    --primary-dark: #115e59;
+    --primary-light: #ccfbf1;
+
+    /* Background */
+    --background: #f8fafc;
+    --foreground: #0f172a;
+    --card: #ffffff;
+    --secondary: #f1f5f9;
+
+    /* Text */
+    --muted-foreground: #64748b;
+    --text-light: #94a3b8;
+
+    /* Borders */
+    --border: #e2e8f0;
+    --border-dark: #cbd5e1;
+
+    /* Status */
+    --success: #16a34a;
+    --success-dark: #15803d;
+    --success-light: #dcfce7;
+
+    --warning: #d97706;
+    --warning-dark: #b45309;
+    --warning-light: #fef3c7;
+
+    --danger: #dc2626;
+    --danger-dark: #b91c1c;
+    --danger-light: #fee2e2;
+
+    --info: #2563eb;
+    --info-dark: #1d4ed8;
+    --info-light: #dbeafe;
+
+    --purple: #7c3aed;
+    --purple-dark: #6d28d9;
+    --purple-light: #ede9fe;
+
+    /* Monitoring */
+    --online: #16a34a;
+    --offline: #64748b;
+    --emergency: #dc2626;
+    --emergency-dark: #b91c1c;
+
+    /* Layout */
+    --sidebar-width: 250px;
+    --header-height: 70px;
+    --content-max-width: 1500px;
+
+    /* Radius */
+    --radius-xs: 5px;
+    --radius-sm: 8px;
+    --radius: 10px;
+    --radius-lg: 14px;
+    --radius-xl: 18px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+    --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+    --shadow-lg: 0 14px 35px rgba(15, 23, 42, 0.10);
+
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition: 0.2s ease;
+    --transition-slow: 0.3s ease;
+}
+
+
+/* =========================================================
+   GLOBAL BOX SIZING
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HTML
+========================================================= */
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    min-height: 100vh;
+
+    background: var(--background);
+    color: var(--foreground);
+
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.5;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   ELEMENT RESET
+========================================================= */
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+img,
+svg {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}

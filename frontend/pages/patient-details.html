@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="ArogyaConnect Patient Details"
+    >
+
+    <title>
+        Patient Details | ArogyaConnect
+    </title>
+
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="../css/sidebar.css">
+<link rel="stylesheet" href="../css/patient-details.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="../css/layout.css">
+
+
+    <style>
+
+        /* =================================================
+           PATIENT DETAILS PAGE
+        ================================================== */
+
+        .patient-details-content {
+            padding: 28px 30px 40px;
+        }
+
+
+        .patient-details-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+
+        .patient-details-heading span {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--primary);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+
+        .patient-details-heading h2 {
+            margin: 0;
+            color: var(--foreground);
+            font-family: var(--font-heading);
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+
+        .patient-details-heading p {
+            margin: 8px 0 0;
+            color: var(--muted-foreground);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        .patient-details-actions {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+
+        .patient-action-btn {
+            min-height: 38px;
+            padding: 0 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+
+            background: var(--card);
+            color: var(--foreground);
+
+            font-family: var(--font-body);
+            font-size: 11px;
+            font-weight: 700;
+
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        .patient-action-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+
+        .patient-action-btn.primary {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: #fff;
+        }
+
+
+        .patient-action-btn.primary:hover {
+            border-color: var(--primary-dark);
+            background: var(--primary-dark);
+            color: #fff;
+        }
+
+
+        /* =================================================
+           PATIENT PROFILE
+        ================================================== */
+
+        .patient-profile-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 22px;
+            margin-bottom: 20px;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+
+            background: var(--card);
+
+            box-shadow: var(--shadow-sm);
+        }
+
+
+        .patient-profile-main {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+
+        .patient-profile-avatar {
+            width: 68px;
+            height: 68px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+
+            background: var(--primary-light);
+            color: var(--primary-dark);
+
+            font-family: var(--font-heading);
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+
+        .patient-profile-info .patient-id-label {
+            display: block;
+
+            color: var(--muted-foreground);
+
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+
+        .patient-profile-info .patient-id-label strong {
+            color: var(--foreground);
+        }
+
+
+        .patient-profile-info h3 {
+            margin: 4px 0 4px;
+
+            color: var(--foreground);
+
+            font-family: var(--font-heading);
+
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+
+        .patient-profile-info p {
+            margin: 0;
+
+            color: var(--muted-foreground);
+
+            font-size: 12px;
+        }
+
+
+        .patient-condition-badge {
+            display: inline-flex;
+            align-items: center;
+
+            min-height: 30px;
+
+            padding: 0 10px;
+            margin-top: 8px;
+
+            border-radius: 999px;
+
+            background: var(--success-light);
+            color: var(--success-dark);
+
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+
+        .patient-profile-status {
+            display: flex;
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 9px 12px;
+
+            border-radius: 999px;
+
+            background: var(--success-light);
+            color: var(--success-dark);
+
+            font-size: 10px;
+            font-weight: 800;
+
+            white-space: nowrap;
+        }
+
+
+        .patient-profile-status-dot {
+            width: 7px;
+            height: 7px;
+
+            flex-shrink: 0;
+
+            border-radius: 50%;
+
+            background: var(--success);
+        }
+
+
+        /* =================================================
+           DETAILS GRID
+        ================================================== */
+
+        .patient-details-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        .patient-details-card {
+            padding: 20px;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+
+            background: var(--card);
+
+            box-shadow: var(--shadow-sm);
+        }
+
+
+        .patient-details-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+
+        .patient-details-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 12px;
+
+            padding-bottom: 14px;
+            margin-bottom: 16px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .patient-details-card-header h3 {
+            margin: 0;
+
+            color: var(--foreground);
+
+            font-family: var(--font-heading);
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+
+        .patient-details-card-header span {
+            color: var(--muted-foreground);
+
+            font-size: 10px;
+        }
+
+
+        /* =================================================
+           DETAIL FIELDS
+        ================================================== */
+
+        .details-fields {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 16px;
+        }
+
+
+        .details-field {
+            min-width: 0;
+        }
+
+
+        .details-field.full {
+            grid-column: 1 / -1;
+        }
+
+
+        .details-field-label {
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: var(--muted-foreground);
+
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+
+        .details-field-value {
+            min-height: 39px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 9px 11px;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+
+            background: var(--background);
+            color: var(--foreground);
+
+            font-size: 12px;
+            font-weight: 600;
+
+            line-height: 1.5;
+        }
+
+
+        .details-field-value.multiline {
+            align-items: flex-start;
+
+            min-height: 70px;
+        }
+
+
+        .details-field-value.muted {
+            color: var(--muted-foreground);
+            font-weight: 500;
+        }
+
+
+        /* =================================================
+           MONITORING SUMMARY
+        ================================================== */
+
+        .monitoring-summary-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 12px;
+        }
+
+
+        .monitoring-summary-item {
+            padding: 13px;
+
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+
+            background: var(--background);
+        }
+
+
+        .monitoring-summary-item span {
+            display: block;
+
+            color: var(--muted-foreground);
+
+            font-size: 9px;
+            font-weight: 600;
+        }
+
+
+        .monitoring-summary-item strong {
+            display: block;
+
+            margin-top: 5px;
+
+            color: var(--foreground);
+
+            font-family: var(--font-heading);
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+
+        /* =================================================
+           CLINICAL TAGS
+        ================================================== */
+
+        .medical-tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+        }
+
+
+        .medical-tag {
+            padding: 7px 10px;
+
+            border: 1px solid var(--border);
+            border-radius: 999px;
+
+            background: var(--secondary);
+            color: var(--foreground);
+
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+
+        .medical-tag.primary {
+            border-color: var(--primary-light);
+
+            background: var(--primary-light);
+            color: var(--primary-dark);
+        }
+
+
+        /* =================================================
+           LOADING
+        ================================================== */
+
+        .patient-details-loading {
+            padding: 60px 20px;
+
+            text-align: center;
+        }
+
+
+        .patient-details-loading-icon {
+            width: 44px;
+            height: 44px;
+
+            margin: 0 auto 12px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: var(--primary-light);
+            color: var(--primary);
+
+            font-weight: 800;
+        }
+
+
+        .patient-details-loading strong {
+            display: block;
+
+            color: var(--foreground);
+
+            font-family: var(--font-heading);
+
+            font-size: 14px;
+        }
+
+
+        .patient-details-loading p {
+            margin: 6px 0 0;
+
+            color: var(--muted-foreground);
+
+            font-size: 11px;
+        }
+
+
+        /* =================================================
+           ERROR
+        ================================================== */
+
+        .patient-details-error {
+            display: none;
+
+            padding: 18px;
+            margin-bottom: 18px;
+
+            border: 1px solid var(--danger-light);
+            border-radius: var(--radius-lg);
+
+            background: var(--danger-light);
+            color: var(--danger-dark);
+
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+
+        .patient-details-error.show {
+            display: block;
+        }
+
+
+        /* =================================================
+           FOOTER
+        ================================================== */
+
+        .patient-details-footer {
+            margin-top: 25px;
+
+            color: var(--text-light);
+
+            font-size: 10px;
+
+            text-align: center;
+        }
+
+
+        /* =================================================
+           RESPONSIVE
+        ================================================== */
+
+        @media (max-width: 1100px) {
+
+            .monitoring-summary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            .patient-details-content {
+                padding: 22px 18px 32px;
+            }
+
+
+            .patient-details-header {
+                flex-direction: column;
+            }
+
+
+            .patient-profile-card {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+
+            .patient-profile-status {
+                align-self: flex-start;
+            }
+
+
+            .patient-details-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .patient-details-card.full-width {
+                grid-column: auto;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .details-fields {
+                grid-template-columns: 1fr;
+            }
+
+
+            .details-field.full {
+                grid-column: auto;
+            }
+
+
+            .monitoring-summary-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .patient-profile-main {
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 420px) {
+
+            .patient-details-actions {
+                width: 100%;
+            }
+
+
+            .patient-action-btn {
+                flex: 1;
+
+                text-align: center;
+            }
+
+
+            .monitoring-summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .patient-profile-avatar {
+                width: 56px;
+                height: 56px;
+            }
+
+
+            .patient-profile-info h3 {
+                font-size: 17px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="dashboard-page patient-details-page">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <!-- BRAND -->
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-brand-mark">
+                A
+            </div>
+
+            <div class="sidebar-brand-text">
+
+                <strong>
+                    ArogyaConnect
+                </strong>
+
+                <span>
+                    Patient Care
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR CONTENT -->
+
+        <div class="sidebar-content">
+
+
+            <!-- MAIN -->
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-section-title">
+                    Main
+                </span>
+
+
+                <nav class="sidebar-nav">
+
+
+                    <!-- NURSE DASHBOARD -->
+
+                    <a
+                        href="nurse-dashboard.html"
+                        class="sidebar-nav-item"
+                        data-nurse-only
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="3"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="3"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <!-- DOCTOR DASHBOARD -->
+
+                    <a
+                        href="doctor-dashboard.html"
+                        class="sidebar-nav-item"
+                        data-doctor-only
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="3"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="3"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <!-- PATIENT MONITORING -->
+
+                    <a
+                        href="patient-monitor.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <path
+                                d="M3 12h4l2-7 4 14 2-7h6"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Patient Monitoring
+                        </span>
+
+                    </a>
+
+
+                    <!-- PATIENT HISTORY -->
+
+                    <a
+                        href="patient-history.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <path
+                                d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"
+                            />
+
+                            <path
+                                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Patient History
+                        </span>
+
+                    </a>
+
+
+                    <!-- ALERTS -->
+
+                    <a
+                        href="alerts.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <path
+                                d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                            />
+
+                            <path
+                                d="M13.73 21a2 2 0 0 1-3.46 0"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Alerts
+                        </span>
+
+                        <span
+                            class="sidebar-alert-count"
+                            id="alertCount"
+                            style="display:none;"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-section-title">
+                    Account
+                </span>
+
+
+                <nav class="sidebar-nav">
+
+                    <a
+                        href="profile.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="4"
+                            />
+
+                            <path
+                                d="M4 21a8 8 0 0 1 16 0"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Profile
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR FOOTER -->
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-staff-card">
+
+                <div
+                    class="sidebar-user-avatar"
+                    id="sidebarUserAvatar"
+                >
+                    U
+                </div>
+
+
+                <div class="sidebar-user-info">
+
+                    <strong id="sidebarUserName">
+                        User
+                    </strong>
+
+                    <span id="sidebarUserRole">
+                        Staff
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="sidebar-logout"
+                data-logout
+            >
+
+                <span>
+                    ↪
+                </span>
+
+                <span>
+                    Sign out
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MOBILE OVERLAY -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                    aria-controls="sidebar"
+                    aria-expanded="false"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+
+                        <line
+                            x1="4"
+                            y1="6"
+                            x2="20"
+                            y2="6"
+                        />
+
+                        <line
+                            x1="4"
+                            y1="12"
+                            x2="20"
+                            y2="12"
+                        />
+
+                        <line
+                            x1="4"
+                            y1="18"
+                            x2="20"
+                            y2="18"
+                        />
+
+                    </svg>
+
+                </button>
+
+
+                <div>
+
+                    <span class="dashboard-header-label">
+                        AROGYACONNECT
+                    </span>
+
+                    <h1>
+                        Patient Details
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-header-right">
+
+
+                <!-- DATE -->
+
+                <div class="dashboard-date">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                        />
+
+                        <line
+                            x1="16"
+                            y1="2"
+                            x2="16"
+                            y2="6"
+                        />
+
+                        <line
+                            x1="8"
+                            y1="2"
+                            x2="8"
+                            y2="6"
+                        />
+
+                        <line
+                            x1="3"
+                            y1="10"
+                            x2="21"
+                            y2="10"
+                        />
+
+                    </svg>
+
+                    <span id="currentDate">
+                        Loading date...
+                    </span>
+
+                </div>
+
+
+                <!-- USER -->
+
+                <div class="header-user">
+
+                    <div
+                        class="header-user-avatar"
+                        id="headerUserAvatar"
+                    >
+                        U
+                    </div>
+
+
+                    <div class="header-user-info">
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <span id="headerUserRole">
+                            Staff
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <div class="patient-details-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <section class="patient-details-header">
+
+                <div class="patient-details-heading">
+
+                    <span>
+                        Patient Information
+                    </span>
+
+                    <h2>
+                        Patient Profile
+                    </h2>
+
+                    <p>
+                        Review the patient's demographic and
+                        clinical information.
+                    </p>
+
+                </div>
+
+
+                <div class="patient-details-actions">
+
+                    <a
+                        href="patient-monitor.html"
+                        class="patient-action-btn primary"
+                    >
+                        Live Monitoring
+                    </a>
+
+                    <a
+                        href="patient-history.html"
+                        class="patient-action-btn"
+                    >
+                        View History
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ERROR -->
+
+            <div
+                class="patient-details-error"
+                id="patientDetailsError"
+            >
+                Unable to load patient information.
+            </div>
+
+
+            <!-- =================================================
+                 PATIENT PROFILE
+            ================================================== -->
+
+            <section class="patient-profile-card">
+
+                <div class="patient-profile-main">
+
+                    <div
+                        class="patient-profile-avatar"
+                        id="patientAvatar"
+                    >
+                        PT
+                    </div>
+
+
+                    <div class="patient-profile-info">
+
+                        <span class="patient-id-label">
+
+                            Patient ID:
+
+                            <strong id="patientCode">
+                                —
+                            </strong>
+
+                        </span>
+
+
+                        <h3 id="patientName">
+                            Loading patient...
+                        </h3>
+
+
+                        <p id="patientBasicInfo">
+                            Retrieving patient information...
+                        </p>
+
+
+                        <span
+                            class="patient-condition-badge"
+                            id="patientCondition"
+                        >
+                            Monitoring
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="patient-profile-status">
+
+                    <span class="patient-profile-status-dot"></span>
+
+                    <span id="patientStatus">
+                        Under Monitoring
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 DETAILS GRID
+            ================================================== -->
+
+            <div
+                class="patient-details-grid"
+                id="patientDetailsGrid"
+            >
+
+
+                <!-- PERSONAL INFORMATION -->
+
+                <section class="patient-details-card">
+
+                    <div class="patient-details-card-header">
+
+                        <h3>
+                            Personal Information
+                        </h3>
+
+                        <span>
+                            Patient record
+                        </span>
+
+                    </div>
+
+
+                    <div class="details-fields">
+
+
+                        <div class="details-field">
+
+                            <span class="details-field-label">
+                                Full Name
+                            </span>
+
+                            <div
+                                class="details-field-value"
+                                id="detailFullName"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="details-field">
+
+                            <span class="details-field-label">
+                                Patient ID
+                            </span>
+
+                            <div
+                                class="details-field-value"
+                                id="detailPatientCode"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="details-field">
+
+                            <span class="details-field-label">
+                                Age
+                            </span>
+
+                            <div
+                                class="details-field-value"
+                                id="detailAge"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="details-field">
+
+                            <span class="details-field-label">
+                                Gender
+                            </span>
+
+                            <div
+                                class="details-field-value"
+                                id="detailGender"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- MEDICAL INFORMATION -->
+
+                <section class="patient-details-card">
+
+                    <div class="patient-details-card-header">
+
+                        <h3>
+                            Medical Information
+                        </h3>
+
+                        <span>
+                            Clinical record
+                        </span>
+
+                    </div>
+
+
+                    <div class="details-fields">
+
+
+                        <div class="details-field full">
+
+                            <span class="details-field-label">
+                                Diagnosis
+                            </span>
+
+                            <div
+                                class="details-field-value multiline"
+                                id="detailDiagnosis"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="details-field full">
+
+                            <span class="details-field-label">
+                                Medical Conditions
+                            </span>
+
+                            <div
+                                class="details-field-value multiline"
+                                id="detailMedicalConditions"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ADDITIONAL INFORMATION -->
+
+                <section class="patient-details-card">
+
+                    <div class="patient-details-card-header">
+
+                        <h3>
+                            Additional Information
+                        </h3>
+
+                        <span>
+                            Patient record
+                        </span>
+
+                    </div>
+
+
+                    <div class="details-fields">
+
+
+                        <div class="details-field">
+
+                            <span class="details-field-label">
+                                Date of Birth
+                            </span>
+
+                            <div
+                                class="details-field-value muted"
+                                id="detailDateOfBirth"
+                            >
+                                Not available
+                            </div>
+
+                        </div>
+
+
+                        <div class="details-field">
+
+                            <span class="details-field-label">
+                                Blood Group
+                            </span>
+
+                            <div
+                                class="details-field-value muted"
+                                id="detailBloodGroup"
+                            >
+                                Not available
+                            </div>
+
+                        </div>
+
+
+                        <div class="details-field full">
+
+                            <span class="details-field-label">
+                                Notes
+                            </span>
+
+                            <div
+                                class="details-field-value multiline muted"
+                                id="detailNotes"
+                            >
+                                No additional notes available.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- MONITORING SUMMARY -->
+
+                <section class="patient-details-card">
+
+                    <div class="patient-details-card-header">
+
+                        <h3>
+                            Monitoring Summary
+                        </h3>
+
+                        <span>
+                            Current status
+                        </span>
+
+                    </div>
+
+
+                    <div class="monitoring-summary-grid">
+
+
+                        <div class="monitoring-summary-item">
+
+                            <span>
+                                Temperature
+                            </span>
+
+                            <strong id="summaryTemperature">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="monitoring-summary-item">
+
+                            <span>
+                                Position
+                            </span>
+
+                            <strong id="summaryPosition">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="monitoring-summary-item">
+
+                            <span>
+                                Fall Status
+                            </span>
+
+                            <strong id="summaryFall">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="monitoring-summary-item">
+
+                            <span>
+                                Last Reading
+                            </span>
+
+                            <strong id="summaryLastUpdate">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- CLINICAL CONDITIONS -->
+
+                <section class="patient-details-card full-width">
+
+                    <div class="patient-details-card-header">
+
+                        <h3>
+                            Clinical Conditions
+                        </h3>
+
+                        <span>
+                            Recorded patient information
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="medical-tags"
+                        id="medicalTags"
+                    >
+
+                        <span class="medical-tag primary">
+                            Monitoring
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+            <!-- LOADING -->
+
+            <div
+                class="patient-details-loading"
+                id="patientDetailsLoading"
+                style="display:none;"
+            >
+
+                <div class="patient-details-loading-icon">
+                    …
+                </div>
+
+                <strong>
+                    Loading patient information
+                </strong>
+
+                <p>
+                    Please wait while the patient record is retrieved.
+                </p>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <footer class="patient-details-footer">
+                ArogyaConnect Patient Care System
+            </footer>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/api.js"></script>
+
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/navigation.js"></script>
+
+</body>
+
+</html>

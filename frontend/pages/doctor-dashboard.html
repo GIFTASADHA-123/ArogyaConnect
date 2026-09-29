@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="ArogyaConnect Doctor Dashboard"
+    >
+
+    <title>Doctor Dashboard | ArogyaConnect</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/doctor-dashboard.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <link
+    rel="stylesheet"
+    href="../css/layout.css"
+>
+
+</head>
+
+
+<body class="doctor-dashboard-page">
+
+
+<div class="app-shell">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <!-- BRAND -->
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-brand-mark">
+                A
+            </div>
+
+            <div class="sidebar-brand-text">
+
+                <strong>
+                    ArogyaConnect
+                </strong>
+
+                <span>
+                    Patient Care
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="sidebar-content">
+
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-section-title">
+                    Main
+                </span>
+
+
+                <nav class="sidebar-nav">
+
+
+                    <a
+                        href="doctor-dashboard.html"
+                        class="sidebar-nav-item active"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <rect
+                                x="3"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+                            <rect
+                                x="14"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+                            <rect
+                                x="3"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+                            <rect
+                                x="14"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+                        </svg>
+
+                        <span class="sidebar-nav-label">
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="patient-monitor.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <path d="M3 12h4l2-7 4 14 2-7h6" />
+                        </svg>
+
+                        <span class="sidebar-nav-label">
+                            Patient Monitoring
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="patient-history.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"
+                            />
+
+                            <path
+                                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                            />
+                        </svg>
+
+                        <span class="sidebar-nav-label">
+                            Patient History
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="alerts.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                            />
+
+                            <path
+                                d="M13.73 21a2 2 0 0 1-3.46 0"
+                            />
+                        </svg>
+
+                        <span class="sidebar-nav-label">
+                            Alerts
+                        </span>
+
+                        <span
+                            class="sidebar-alert-count"
+                            id="alertCount"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-section-title">
+                    Account
+                </span>
+
+
+                <nav class="sidebar-nav">
+
+                    <a
+                        href="profile.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="3"
+                            />
+
+                            <path
+                                d="M5 21c.8-4.2 3-6.5 7-6.5s6.2 2.3 7 6.5"
+                            />
+                        </svg>
+
+                        <span class="sidebar-nav-label">
+                            Profile
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR FOOTER -->
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-staff-card">
+
+                <div
+                    class="sidebar-user-avatar"
+                    id="sidebarUserAvatar"
+                >
+                    D
+                </div>
+
+                <div class="sidebar-staff-info">
+
+                    <strong id="sidebarUserName">
+                        Doctor
+                    </strong>
+
+                    <span id="sidebarUserRole">
+                        Doctor
+                    </span>
+
+                </div>
+
+                <span class="sidebar-staff-status"></span>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="sidebar-logout"
+                id="logoutButton"
+                data-logout
+            >
+
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    width="18"
+                    height="18"
+                    aria-hidden="true"
+                >
+                    <path d="M10 17l5-5-5-5" />
+                    <path d="M15 12H3" />
+                    <path d="M21 19V5a2 2 0 0 0-2-2h-6" />
+                </svg>
+
+                <span>
+                    Sign out
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MOBILE OVERLAY -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+
+
+            <div class="dashboard-header-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M4 6h16" />
+                        <path d="M4 12h16" />
+                        <path d="M4 18h16" />
+                    </svg>
+
+                </button>
+
+
+                <div class="dashboard-header-title">
+
+                    <span class="dashboard-header-label">
+                        DOCTOR WORKSPACE
+                    </span>
+
+                    <h1>
+                        Clinical Dashboard
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-header-right">
+
+
+                <div class="dashboard-date">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                    >
+                        <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="17"
+                            rx="2"
+                        />
+
+                        <path d="M16 2v4" />
+                        <path d="M8 2v4" />
+                        <path d="M3 10h18" />
+
+                    </svg>
+
+                    <span id="currentDate">
+                        Loading date...
+                    </span>
+
+                </div>
+
+
+                <div class="header-user">
+
+                    <div
+                        class="header-user-avatar"
+                        id="headerUserAvatar"
+                    >
+                        D
+                    </div>
+
+                    <div class="header-user-info">
+
+                        <strong id="headerUserName">
+                            Doctor
+                        </strong>
+
+                        <span id="headerUserRole">
+                            Doctor
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             DASHBOARD CONTENT
+        ================================================== -->
+
+        <div class="dashboard-content">
+
+
+            <!-- ERROR -->
+
+            <div
+                class="dashboard-message dashboard-error"
+                id="dashboardError"
+                role="alert"
+                hidden
+            ></div>
+
+
+            <!-- =================================================
+                 WELCOME
+            ================================================== -->
+
+            <section class="doctor-welcome">
+
+
+                <div class="doctor-welcome-content">
+
+                    <span class="welcome-label">
+                        CLINICAL OVERVIEW
+                    </span>
+
+                    <h2>
+                        Welcome back,
+                        <span id="welcomeName">
+                            Doctor
+                        </span>
+                    </h2>
+
+                    <p>
+                        Review patient status, current
+                        monitoring information, alerts,
+                        and clinical events from one workspace.
+                    </p>
+
+                </div>
+
+
+                <div class="doctor-welcome-actions">
+
+                    <button
+                        type="button"
+                        class="doctor-refresh-button"
+                        id="refreshDashboard"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path
+                                d="M20 11a8.1 8.1 0 0 0-15.5-3"
+                            />
+                            <path d="M4 5v4h4" />
+                            <path
+                                d="M4 13a8.1 8.1 0 0 0 15.5 3"
+                            />
+                            <path d="M20 19v-4h-4" />
+                        </svg>
+
+                        Refresh Data
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SUMMARY
+            ================================================== -->
+
+            <section class="doctor-summary-grid">
+
+
+                <article class="doctor-summary-card">
+
+                    <div class="doctor-summary-icon patients">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <circle
+                                cx="9"
+                                cy="8"
+                                r="3"
+                            />
+
+                            <path
+                                d="M3 20c.7-4 2.7-6 6-6s5.3 2 6 6"
+                            />
+
+                            <path
+                                d="M16 11a3 3 0 1 0 0-6"
+                            />
+
+                            <path
+                                d="M17 14c2.5.4 3.8 2.1 4 5"
+                            />
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Registered Patients
+                        </span>
+
+                        <strong id="totalPatients">
+                            0
+                        </strong>
+
+                        <small>
+                            Patient records
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="doctor-summary-card">
+
+                    <div class="doctor-summary-icon live">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path d="M3 12h4l2-7 4 14 2-7h6" />
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Live Patient
+                        </span>
+
+                        <strong
+                            id="livePatientName"
+                            class="summary-name"
+                        >
+                            —
+                        </strong>
+
+                        <small id="livePatientCode">
+                            No live readings
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="doctor-summary-card">
+
+                    <div class="doctor-summary-icon alerts">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path
+                                d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                            />
+
+                            <path
+                                d="M13.73 21a2 2 0 0 1-3.46 0"
+                            />
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Active Alerts
+                        </span>
+
+                        <strong id="activeAlerts">
+                            0
+                        </strong>
+
+                        <small>
+                            Unacknowledged
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <article class="doctor-summary-card">
+
+                    <div class="doctor-summary-icon events">
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path
+                                d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"
+                            />
+
+                            <path
+                                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                            />
+                        </svg>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Patient Events
+                        </span>
+
+                        <strong id="eventCount">
+                            0
+                        </strong>
+
+                        <small>
+                            Recent clinical events
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 PATIENT OVERVIEW
+            ================================================== -->
+
+            <section class="doctor-section">
+
+
+                <div class="doctor-section-heading">
+
+                    <div>
+
+                        <span>
+                            PATIENT RECORDS
+                        </span>
+
+                        <h3>
+                            Patient Overview
+                        </h3>
+
+                    </div>
+
+
+                    <span
+                        class="doctor-live-status"
+                        id="doctorLiveStatus"
+                    >
+
+                        <span></span>
+
+                        <span>
+                            Updating
+                        </span>
+
+                    </span>
+
+                </div>
+
+
+                <div class="patient-overview-card">
+
+                    <div class="doctor-table-wrapper">
+
+                        <table class="doctor-patient-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Patient
+                                    </th>
+
+                                    <th>
+                                        Temperature
+                                    </th>
+
+                                    <th>
+                                        Position
+                                    </th>
+
+                                    <th>
+                                        Fall
+                                    </th>
+
+                                    <th>
+                                        Urine
+                                    </th>
+
+                                    <th>
+                                        IV
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                    <th>
+                                        Action
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="patientTableBody">
+
+                                <tr>
+
+                                    <td
+                                        colspan="8"
+                                        class="table-loading"
+                                    >
+                                        Loading patient data...
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CURRENT PATIENT
+            ================================================== -->
+
+            <section class="doctor-section">
+
+
+                <div class="doctor-section-heading">
+
+                    <div>
+
+                        <span>
+                            CURRENT MONITORING
+                        </span>
+
+                        <h3>
+                            Live Patient Summary
+                        </h3>
+
+                    </div>
+
+
+                    <div class="doctor-section-actions">
+
+                        <a
+                            href="patient-monitor.html"
+                            id="openLiveMonitor"
+                            class="doctor-outline-button"
+                        >
+                            Open Monitor
+                        </a>
+
+                        <a
+                            href="patient-history.html"
+                            id="openPatientHistory"
+                            class="doctor-primary-button"
+                        >
+                            View History
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="current-doctor-patient"
+                    id="currentPatientPanel"
+                >
+
+
+                    <div class="doctor-patient-header">
+
+
+                        <div class="doctor-patient-identity">
+
+                            <div
+                                class="doctor-patient-avatar"
+                                id="currentPatientAvatar"
+                            >
+                                P
+                            </div>
+
+
+                            <div>
+
+                                <div class="doctor-patient-name-row">
+
+                                    <h3 id="currentPatientName">
+                                        No live patient
+                                    </h3>
+
+                                    <span
+                                        class="doctor-patient-badge"
+                                        id="currentPatientBadge"
+                                    >
+                                        Waiting
+                                    </span>
+
+                                </div>
+
+
+                                <p id="currentPatientDetails">
+                                    No live monitoring data
+                                    is currently available.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="doctor-last-update">
+
+                            <span>
+                                Last update
+                            </span>
+
+                            <strong id="lastUpdate">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SENSOR VALUES -->
+
+                    <div class="doctor-sensor-grid">
+
+
+                        <div class="doctor-sensor-card">
+
+                            <div class="doctor-sensor-heading">
+
+                                <span class="doctor-sensor-icon">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                    >
+                                        <path
+                                            d="M14 14.8V5a2 2 0 0 0-4 0v9.8a4 4 0 1 0 4 0z"
+                                        />
+
+                                        <path d="M12 12V6" />
+                                    </svg>
+
+                                </span>
+
+                                <span>
+                                    Temperature
+                                </span>
+
+                            </div>
+
+
+                            <div class="doctor-sensor-value">
+
+                                <strong id="temperatureValue">
+                                    —
+                                </strong>
+
+                                <span>
+                                    °C
+                                </span>
+
+                            </div>
+
+
+                            <small id="temperatureStatus">
+                                No reading
+                            </small>
+
+                        </div>
+
+
+                        <div class="doctor-sensor-card">
+
+                            <div class="doctor-sensor-heading">
+
+                                <span class="doctor-sensor-icon">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                    >
+                                        <path
+                                            d="M12 3l8 4v5c0 4.8-3.4 8.8-8 10-4.6-1.2-8-5.2-8-10V7l8-4z"
+                                        />
+
+                                        <path d="M12 8v5" />
+
+                                        <circle
+                                            cx="12"
+                                            cy="16.5"
+                                            r=".7"
+                                            fill="currentColor"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                                <span>
+                                    Fall Detection
+                                </span>
+
+                            </div>
+
+
+                            <div class="doctor-sensor-value">
+
+                                <strong id="fallValue">
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <small id="fallStatus">
+                                No reading
+                            </small>
+
+                        </div>
+
+
+                        <div class="doctor-sensor-card">
+
+                            <div class="doctor-sensor-heading">
+
+                                <span class="doctor-sensor-icon">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                    >
+                                        <circle
+                                            cx="12"
+                                            cy="5"
+                                            r="2.5"
+                                        />
+
+                                        <path
+                                            d="M7 21c.5-4 1.5-7 5-7s4.5 3 5 7"
+                                        />
+
+                                        <path d="M8 10h8" />
+
+                                    </svg>
+
+                                </span>
+
+                                <span>
+                                    Position
+                                </span>
+
+                            </div>
+
+
+                            <div class="doctor-sensor-value">
+
+                                <strong id="positionValue">
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <small id="positionStatus">
+                                Duration: —
+                            </small>
+
+                        </div>
+
+
+                        <div class="doctor-sensor-card">
+
+                            <div class="doctor-sensor-heading">
+
+                                <span class="doctor-sensor-icon">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                    >
+                                        <path
+                                            d="M12 3s6 6.3 6 11a6 6 0 0 1-12 0c0-4.7 6-11 6-11z"
+                                        />
+                                    </svg>
+
+                                </span>
+
+                                <span>
+                                    Urine Level
+                                </span>
+
+                            </div>
+
+
+                            <div class="doctor-sensor-value">
+
+                                <strong id="urineValue">
+                                    —
+                                </strong>
+
+                                <span>
+                                    cm
+                                </span>
+
+                            </div>
+
+
+                            <small id="urineStatus">
+                                No reading
+                            </small>
+
+                        </div>
+
+
+                        <div class="doctor-sensor-card">
+
+                            <div class="doctor-sensor-heading">
+
+                                <span class="doctor-sensor-icon">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                    >
+                                        <path d="M8 3h8" />
+
+                                        <path
+                                            d="M10 3v5l-4 7a4 4 0 0 0 3.5 6h5a4 4 0 0 0 3.5-6l-4-7V3"
+                                        />
+
+                                        <path d="M8 14h8" />
+                                    </svg>
+
+                                </span>
+
+                                <span>
+                                    IV Fluid Level
+                                </span>
+
+                            </div>
+
+
+                            <div class="doctor-sensor-value">
+
+                                <strong id="ivValue">
+                                    —
+                                </strong>
+
+                                <span>
+                                    cm
+                                </span>
+
+                            </div>
+
+
+                            <small id="ivStatus">
+                                No reading
+                            </small>
+
+                        </div>
+
+
+                        <!-- GYROSCOPE -->
+
+                        <div class="doctor-sensor-card doctor-gyro-card">
+
+                            <div class="doctor-sensor-heading">
+
+                                <span class="doctor-sensor-icon">
+
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                    >
+                                        <circle
+                                            cx="12"
+                                            cy="12"
+                                            r="8"
+                                        />
+
+                                        <circle
+                                            cx="12"
+                                            cy="12"
+                                            r="3"
+                                        />
+
+                                        <path d="M12 4v5" />
+                                        <path d="M20 12h-5" />
+                                        <path d="M12 20v-5" />
+                                        <path d="M4 12h5" />
+
+                                    </svg>
+
+                                </span>
+
+                                <span>
+                                    Movement / Gyroscope
+                                </span>
+
+                            </div>
+
+
+                            <div class="doctor-gyro-values">
+
+                                <div>
+
+                                    <span>
+                                        X axis
+                                    </span>
+
+                                    <strong id="gyroX">
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Y axis
+                                    </span>
+
+                                    <strong id="gyroY">
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Z axis
+                                    </span>
+
+                                    <strong id="gyroZ">
+                                        —
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 LOWER GRID
+            ================================================== -->
+
+            <section class="doctor-lower-grid">
+
+
+                <!-- ALERTS -->
+
+                <article class="doctor-panel">
+
+                    <div class="doctor-panel-header">
+
+                        <div>
+
+                            <span>
+                                PATIENT SAFETY
+                            </span>
+
+                            <h3>
+                                Recent Alerts
+                            </h3>
+
+                        </div>
+
+
+                        <a
+                            href="alerts.html"
+                            class="doctor-panel-link"
+                        >
+                            View all
+                        </a>
+
+                    </div>
+
+
+                    <div
+                        class="doctor-alert-list"
+                        id="alertList"
+                    >
+
+                        <div class="doctor-empty">
+                            Loading alerts...
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- EVENTS -->
+
+                <article class="doctor-panel">
+
+                    <div class="doctor-panel-header">
+
+                        <div>
+
+                            <span>
+                                CLINICAL ACTIVITY
+                            </span>
+
+                            <h3>
+                                Recent Patient Events
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="doctor-event-list"
+                        id="eventList"
+                    >
+
+                        <div class="doctor-empty">
+                            Loading events...
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- FOOTER -->
+
+            <footer class="doctor-footer">
+                ArogyaConnect Patient Care System
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/doctor/doctor-dashboard.js"></script>
+
+
+</body>
+
+</html>

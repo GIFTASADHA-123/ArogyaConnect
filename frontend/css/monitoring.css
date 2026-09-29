@@ -1,0 +1,738 @@
+/* =========================================================
+   PATIENT MONITOR
+========================================================= */
+
+.monitoring-page {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.monitoring-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.page-breadcrumb {
+    color: var(--muted-foreground);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.monitoring-header h1 {
+    margin: 0;
+    color: var(--foreground);
+    font-family: var(--font-heading);
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.monitoring-header p {
+    margin: 8px 0 0;
+    color: var(--muted-foreground);
+    font-size: 14px;
+}
+
+.monitoring-header-actions {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    min-height: 40px;
+    padding: 0 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--foreground);
+    border-color: var(--border);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary);
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.monitor-error {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border: 1px solid var(--danger);
+    border-radius: var(--radius);
+    background: var(--danger-light);
+    color: var(--danger-dark);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   PATIENT CARD
+========================================================= */
+
+.monitor-patient-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    padding: 22px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+
+    margin-bottom: 22px;
+}
+
+.monitor-patient-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+
+.monitor-patient-avatar {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary-light);
+    color: var(--primary-dark);
+
+    font-family: var(--font-heading);
+    font-size: 23px;
+    font-weight: 800;
+
+    flex-shrink: 0;
+}
+
+.monitor-patient-info {
+    min-width: 0;
+}
+
+.monitor-patient-name-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.monitor-patient-name-row h2 {
+    margin: 0;
+
+    color: var(--foreground);
+    font-family: var(--font-heading);
+    font-size: 20px;
+}
+
+.monitor-patient-info > p {
+    margin: 6px 0 0;
+
+    color: var(--muted-foreground);
+    font-size: 13px;
+}
+
+.monitor-last-update {
+    margin-top: 8px;
+
+    color: var(--muted-foreground);
+    font-size: 12px;
+}
+
+.monitor-last-update strong {
+    color: var(--foreground);
+}
+
+
+/* =========================================================
+   CONDITION BADGE
+========================================================= */
+
+.condition-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    background: var(--success-light);
+    color: var(--success-dark);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   LIVE STATUS
+========================================================= */
+
+.monitor-live-indicator {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.live-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background: var(--offline);
+
+    box-shadow: 0 0 0 4px rgba(100, 116, 139, 0.12);
+}
+
+.live-dot.active {
+    background: var(--success);
+    box-shadow: 0 0 0 4px var(--success-light);
+}
+
+.live-dot.inactive {
+    background: var(--offline);
+}
+
+.monitor-live-indicator strong {
+    display: block;
+
+    color: var(--foreground);
+    font-size: 13px;
+}
+
+.monitor-live-indicator div > span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--muted-foreground);
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   NO SENSOR DATA
+========================================================= */
+
+.no-sensor-data {
+    padding: 44px 24px;
+    margin-bottom: 22px;
+
+    text-align: center;
+
+    background: white;
+    border: 1px dashed var(--border-dark);
+    border-radius: var(--radius-lg);
+}
+
+.no-data-icon {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--secondary);
+    color: var(--muted-foreground);
+
+    font-size: 24px;
+}
+
+.no-sensor-data h3 {
+    margin: 0;
+
+    color: var(--foreground);
+    font-family: var(--font-heading);
+    font-size: 17px;
+}
+
+.no-sensor-data p {
+    margin: 7px 0 0;
+
+    color: var(--muted-foreground);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SENSOR GRID
+========================================================= */
+
+.sensor-monitor-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.sensor-monitor-card {
+    min-width: 0;
+
+    padding: 18px;
+
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.sensor-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.sensor-card-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: var(--primary-light);
+    color: var(--primary-dark);
+
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.sensor-card-label {
+    margin-bottom: 7px;
+
+    color: var(--muted-foreground);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sensor-main-value {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+
+    color: var(--foreground);
+
+    font-family: var(--font-heading);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.sensor-main-value small {
+    color: var(--muted-foreground);
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sensor-state-value {
+    color: var(--foreground);
+
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 800;
+
+    min-height: 25px;
+}
+
+.sensor-sub-value {
+    margin-top: 7px;
+
+    color: var(--muted-foreground);
+
+    font-size: 11px;
+}
+
+.sensor-sub-value strong {
+    color: var(--foreground);
+}
+
+
+/* =========================================================
+   SENSOR STATUS BADGE
+========================================================= */
+
+.sensor-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 23px;
+    padding: 0 8px;
+
+    border-radius: 999px;
+
+    background: var(--secondary);
+    color: var(--muted-foreground);
+
+    font-size: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.sensor-status-badge.normal {
+    background: var(--success-light);
+    color: var(--success-dark);
+}
+
+.sensor-status-badge.attention {
+    background: var(--warning-light);
+    color: var(--warning-dark);
+}
+
+.sensor-status-badge.danger {
+    background: var(--danger-light);
+    color: var(--danger-dark);
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.monitor-section {
+    margin-bottom: 28px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    gap: 16px;
+
+    margin-bottom: 14px;
+}
+
+.section-heading h2 {
+    margin: 0;
+
+    color: var(--foreground);
+
+    font-family: var(--font-heading);
+    font-size: 18px;
+}
+
+.section-heading p {
+    margin: 5px 0 0;
+
+    color: var(--muted-foreground);
+    font-size: 12px;
+}
+
+.section-link {
+    color: var(--primary);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.section-link:hover {
+    color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   GYROSCOPE
+========================================================= */
+
+.gyro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.gyro-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 17px 20px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.gyro-axis {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: var(--secondary);
+    color: var(--foreground);
+
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.gyro-card strong {
+    color: var(--foreground);
+
+    font-family: var(--font-heading);
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.monitor-alerts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.monitor-alert-item {
+    display: grid;
+    grid-template-columns: 5px 1fr auto;
+    gap: 14px;
+    align-items: center;
+
+    padding: 14px 16px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.monitor-alert-indicator {
+    width: 5px;
+    height: 100%;
+    min-height: 38px;
+
+    border-radius: 999px;
+
+    background: var(--border-dark);
+}
+
+.monitor-alert-item.danger .monitor-alert-indicator {
+    background: var(--danger);
+}
+
+.monitor-alert-item.warning .monitor-alert-indicator {
+    background: var(--warning);
+}
+
+.monitor-alert-item.normal .monitor-alert-indicator {
+    background: var(--success);
+}
+
+.monitor-alert-title {
+    color: var(--foreground);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.monitor-alert-message {
+    margin-top: 3px;
+
+    color: var(--muted-foreground);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.monitor-alert-time {
+    color: var(--muted-foreground);
+
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.monitor-alert-empty {
+    padding: 24px;
+
+    text-align: center;
+
+    background: white;
+    border: 1px dashed var(--border);
+    border-radius: var(--radius);
+
+    color: var(--muted-foreground);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.monitor-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 14px 0 4px;
+
+    color: var(--muted-foreground);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .sensor-monitor-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .monitoring-header {
+        flex-direction: column;
+    }
+
+    .monitoring-header-actions {
+        width: 100%;
+    }
+
+    .monitoring-header-actions .btn {
+        flex: 1;
+    }
+
+    .monitor-patient-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .monitor-live-indicator {
+        width: 100%;
+    }
+
+    .sensor-monitor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .monitoring-header h1 {
+        font-size: 23px;
+    }
+
+    .monitoring-header-actions {
+        flex-direction: column;
+    }
+
+    .monitoring-header-actions .btn {
+        width: 100%;
+    }
+
+    .monitor-patient-card {
+        padding: 17px;
+    }
+
+    .monitor-patient-main {
+        align-items: flex-start;
+    }
+
+    .monitor-patient-avatar {
+        width: 52px;
+        height: 52px;
+    }
+
+    .monitor-patient-name-row h2 {
+        font-size: 17px;
+    }
+
+    .sensor-monitor-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gyro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .monitor-alert-item {
+        grid-template-columns: 5px 1fr;
+    }
+
+    .monitor-alert-time {
+        grid-column: 2;
+    }
+
+    .monitor-footer {
+        flex-direction: column;
+    }
+
+}

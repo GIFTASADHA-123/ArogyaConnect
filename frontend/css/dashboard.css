@@ -1,0 +1,500 @@
+/*
+===========================================================
+ArogyaConnect Dashboard Layout
+===========================================================
+*/
+
+
+/* =======================================================
+   WELCOME
+======================================================= */
+
+.dashboard-welcome {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        22px 24px;
+
+    margin-bottom: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f0fdfa 100%
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.dashboard-welcome-content {
+    min-width: 0;
+}
+
+
+.dashboard-welcome-eyebrow {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        var(--primary);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing:
+        0.08em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.dashboard-welcome h1 {
+    margin-bottom: 5px;
+
+    font-size: 23px;
+}
+
+
+.dashboard-welcome p {
+    margin: 0;
+
+    color:
+        var(--muted-foreground);
+
+    font-size: 13px;
+}
+
+
+.dashboard-date {
+    flex-shrink: 0;
+
+    padding:
+        8px 12px;
+
+    color:
+        var(--muted-foreground);
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius-sm);
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =======================================================
+   PATIENT SUMMARY
+======================================================= */
+
+.patient-summary-card {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        20px;
+
+    margin-bottom: 22px;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.patient-summary-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    min-width: 0;
+}
+
+
+.patient-summary-avatar {
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color:
+        var(--primary-dark);
+
+    background:
+        var(--primary-light);
+
+    border-radius:
+        50%;
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+
+.patient-summary-info {
+    min-width: 0;
+}
+
+
+.patient-summary-name {
+    margin: 0 0 3px;
+
+    overflow: hidden;
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+}
+
+
+.patient-summary-details {
+    color:
+        var(--muted-foreground);
+
+    font-size: 12px;
+}
+
+
+.patient-summary-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+
+/* =======================================================
+   SENSOR GRID
+======================================================= */
+
+.sensor-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    gap: 16px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =======================================================
+   DASHBOARD TWO COLUMN
+======================================================= */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(320px, 0.75fr);
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =======================================================
+   DASHBOARD THREE COLUMN
+======================================================= */
+
+.dashboard-grid-three {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =======================================================
+   SECTION
+======================================================= */
+
+.dashboard-section {
+    margin-bottom: 22px;
+}
+
+
+.dashboard-section:last-child {
+    margin-bottom: 0;
+}
+
+
+.dashboard-section-title {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+
+.dashboard-section-title h2 {
+    margin: 0;
+
+    font-size: 17px;
+}
+
+
+.dashboard-section-title span {
+    color:
+        var(--muted-foreground);
+
+    font-size: 12px;
+}
+
+
+/* =======================================================
+   RECENT LIST
+======================================================= */
+
+.dashboard-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.dashboard-list-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        13px 0;
+
+    border-bottom:
+        1px solid
+        var(--border);
+}
+
+
+.dashboard-list-item:last-child {
+    border-bottom:
+        0;
+}
+
+
+.dashboard-list-icon {
+    width: 34px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius:
+        var(--radius-sm);
+}
+
+
+.dashboard-list-content {
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.dashboard-list-title {
+    margin: 0;
+
+    color:
+        var(--foreground);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.dashboard-list-description {
+    margin-top: 2px;
+
+    color:
+        var(--muted-foreground);
+
+    font-size: 11px;
+}
+
+
+.dashboard-list-time {
+    flex-shrink: 0;
+
+    color:
+        var(--text-light);
+
+    font-size: 10px;
+}
+
+
+/* =======================================================
+   QUICK ACTIONS
+======================================================= */
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 10px;
+}
+
+
+.quick-action {
+    min-height: 78px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    padding:
+        13px;
+
+    color:
+        var(--foreground);
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius-sm);
+
+    text-align: left;
+
+    transition:
+        border-color
+        var(--transition-fast),
+        background
+        var(--transition-fast),
+        transform
+        var(--transition-fast);
+}
+
+
+.quick-action:hover {
+    border-color:
+        #99f6e4;
+
+    background:
+        #f0fdfa;
+
+    transform:
+        translateY(-1px);
+}
+
+
+.quick-action-icon {
+    color:
+        var(--primary);
+
+    font-size: 17px;
+}
+
+
+.quick-action-label {
+    font-size: 12px;
+
+    font-weight: 700;
+}

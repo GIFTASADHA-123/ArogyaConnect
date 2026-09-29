@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="ArogyaConnect Patient History"
+    >
+
+    <title>
+        Patient History | ArogyaConnect
+    </title>
+
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/history.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+
+    <!-- =====================================================
+         PATIENT SELECTOR STYLE
+    ====================================================== -->
+
+    <style>
+
+        .patient-selector-card {
+            margin-bottom: 18px;
+        }
+
+
+        .patient-selector-field {
+            width: min(100%, 520px);
+        }
+
+
+        .patient-selector-field select {
+
+            width: 100%;
+
+            min-height: 46px;
+
+            padding:
+                0 42px 0 14px;
+
+            border:
+                1px solid
+                var(
+                    --border-color,
+                    #d9e1ec
+                );
+
+            border-radius: 10px;
+
+            background: #ffffff;
+
+            color:
+                var(
+                    --text-primary,
+                    #172033
+                );
+
+            font-family:
+                "Inter",
+                sans-serif;
+
+            font-size: 14px;
+
+            font-weight: 500;
+
+            cursor: pointer;
+
+            outline: none;
+
+            transition:
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+
+        }
+
+
+        .patient-selector-field select:hover {
+
+            border-color:
+                var(
+                    --primary-color,
+                    #2563eb
+                );
+
+        }
+
+
+        .patient-selector-field select:focus {
+
+            border-color:
+                var(
+                    --primary-color,
+                    #2563eb
+                );
+
+            box-shadow:
+                0 0 0 3px
+                rgba(
+                    37,
+                    99,
+                    235,
+                    0.10
+                );
+
+        }
+
+
+        .patient-selector-field select:disabled {
+
+            cursor: not-allowed;
+
+            opacity: 0.65;
+
+        }
+
+
+        .patient-selector-field label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .patient-selector-field {
+
+                width: 100%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="dashboard-page patient-history-page">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+
+        <!-- BRAND -->
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-brand-mark">
+                A
+            </div>
+
+            <div class="sidebar-brand-text">
+
+                <strong>
+                    ArogyaConnect
+                </strong>
+
+                <span>
+                    Patient Care
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR CONTENT -->
+
+        <div class="sidebar-content">
+
+
+            <!-- MAIN -->
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-section-title">
+                    Main
+                </span>
+
+
+                <nav class="sidebar-nav">
+
+
+                    <!-- NURSE DASHBOARD -->
+
+                    <a
+                        href="nurse-dashboard.html"
+                        class="sidebar-nav-item"
+                        data-nurse-only
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="3"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="3"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <!-- DOCTOR DASHBOARD -->
+
+                    <a
+                        href="doctor-dashboard.html"
+                        class="sidebar-nav-item"
+                        data-doctor-only
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <rect
+                                x="3"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="3"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <!-- PATIENT MONITORING -->
+
+                    <a
+                        href="patient-monitor.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <path
+                                d="M3 12h4l2-7 4 14 2-7h6"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Patient Monitoring
+                        </span>
+
+                    </a>
+
+
+                    <!-- PATIENT HISTORY -->
+
+                    <a
+                        href="patient-history.html"
+                        class="sidebar-nav-item active"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <path
+                                d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"
+                            />
+
+                            <path
+                                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Patient History
+                        </span>
+
+                    </a>
+
+
+                    <!-- ALERTS -->
+
+                    <a
+                        href="alerts.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <path
+                                d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                            />
+
+                            <path
+                                d="M13.73 21a2 2 0 0 1-3.46 0"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Alerts
+                        </span>
+
+                        <span
+                            class="sidebar-alert-count"
+                            id="alertCount"
+                            style="display:none;"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-section-title">
+                    Account
+                </span>
+
+
+                <nav class="sidebar-nav">
+
+
+                    <!-- PROFILE -->
+
+                    <a
+                        href="profile.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            aria-hidden="true"
+                        >
+
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="4"
+                            />
+
+                            <path
+                                d="M4 21a8 8 0 0 1 16 0"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Profile
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR FOOTER -->
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-staff-card">
+
+                <div
+                    class="sidebar-user-avatar"
+                    id="sidebarUserAvatar"
+                >
+                    U
+                </div>
+
+
+                <div class="sidebar-user-info">
+
+                    <strong id="sidebarUserName">
+                        User
+                    </strong>
+
+                    <span id="sidebarUserRole">
+                        Staff
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="sidebar-logout"
+                data-logout
+            >
+
+                <span>
+                    ↪
+                </span>
+
+                <span>
+                    Sign out
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MOBILE OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="dashboard-header">
+
+
+            <div class="dashboard-header-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                    aria-controls="sidebar"
+                    aria-expanded="false"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+
+                        <line
+                            x1="4"
+                            y1="6"
+                            x2="20"
+                            y2="6"
+                        />
+
+                        <line
+                            x1="4"
+                            y1="12"
+                            x2="20"
+                            y2="12"
+                        />
+
+                        <line
+                            x1="4"
+                            y1="18"
+                            x2="20"
+                            y2="18"
+                        />
+
+                    </svg>
+
+                </button>
+
+
+                <div>
+
+                    <span class="dashboard-header-label">
+                        AROGYACONNECT
+                    </span>
+
+                    <h1>
+                        Patient History
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-header-right">
+
+
+                <!-- DATE -->
+
+                <div class="dashboard-date">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                        />
+
+                        <line
+                            x1="16"
+                            y1="2"
+                            x2="16"
+                            y2="6"
+                        />
+
+                        <line
+                            x1="8"
+                            y1="2"
+                            x2="8"
+                            y2="6"
+                        />
+
+                        <line
+                            x1="3"
+                            y1="10"
+                            x2="21"
+                            y2="10"
+                        />
+
+                    </svg>
+
+
+                    <span id="currentDate">
+                        Loading date...
+                    </span>
+
+                </div>
+
+
+                <!-- USER -->
+
+                <div class="header-user">
+
+                    <div
+                        class="header-user-avatar"
+                        id="headerUserAvatar"
+                    >
+                        U
+                    </div>
+
+
+                    <div class="header-user-info">
+
+                        <strong id="headerUserName">
+                            User
+                        </strong>
+
+                        <span id="headerUserRole">
+                            Staff
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE CONTENT
+        ================================================== -->
+
+        <div class="history-page-content">
+
+
+            <!-- =================================================
+                 PAGE TITLE
+            ================================================== -->
+
+            <section class="history-page-header">
+
+                <div class="history-page-title">
+
+                    <span>
+                        Clinical Records
+                    </span>
+
+                    <h2>
+                        Patient History
+                    </h2>
+
+                    <p>
+                        Review recorded sensor readings,
+                        daily trends, patient events, and
+                        monitoring history.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PATIENT SELECTOR
+            ================================================== -->
+
+            <section
+                class="history-filter-card patient-selector-card"
+            >
+
+                <div class="history-filter-header">
+
+                    <h3>
+                        Select Patient
+                    </h3>
+
+                    <p>
+                        Choose a patient to view their
+                        sensor history.
+                    </p>
+
+                </div>
+
+
+                <div class="history-filter-row">
+
+
+                    <div
+                        class="history-date-field patient-selector-field"
+                    >
+
+                        <label for="patientSelector">
+                            Patient
+                        </label>
+
+
+                        <select
+                            id="patientSelector"
+                            aria-label="Select patient"
+                        >
+
+                            <option value="">
+                                Loading patients...
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PATIENT SUMMARY
+            ================================================== -->
+
+            <section class="history-patient-card">
+
+
+                <div class="history-patient-main">
+
+                    <div
+                        class="history-patient-avatar"
+                        id="patientAvatar"
+                    >
+                        PT
+                    </div>
+
+
+                    <div class="history-patient-info">
+
+                        <span>
+                            Patient
+                        </span>
+
+                        <h3 id="patientName">
+                            Loading patient...
+                        </h3>
+
+                        <p id="patientDetails">
+                            Retrieving patient information...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="history-latest">
+
+                    <span>
+                        Latest recorded reading
+                    </span>
+
+                    <strong id="latestReadingTime">
+                        --
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 HISTORY FILTER
+            ================================================== -->
+
+            <section class="history-filter-card">
+
+
+                <div class="history-filter-header">
+
+                    <h3>
+                        History Period
+                    </h3>
+
+                    <p>
+                        Select the period you want to review.
+                    </p>
+
+                </div>
+
+
+                <div class="history-filter-row">
+
+
+                    <div class="history-filter-buttons">
+
+
+                        <button
+                            type="button"
+                            class="history-filter-btn active"
+                            data-range="today"
+                            id="todayBtn"
+                        >
+                            Today
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="history-filter-btn"
+                            data-range="yesterday"
+                            id="yesterdayBtn"
+                        >
+                            Yesterday
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="history-filter-btn"
+                            data-range="7days"
+                            id="sevenDaysBtn"
+                        >
+                            Last 7 Days
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="history-filter-btn"
+                            data-range="custom"
+                            id="customBtn"
+                        >
+                            Custom
+                        </button>
+
+                    </div>
+
+
+                    <div class="history-date-field">
+
+                        <label for="startDate">
+                            From
+                        </label>
+
+                        <input
+                            type="date"
+                            id="startDate"
+                        >
+
+                    </div>
+
+
+                    <div class="history-date-field">
+
+                        <label for="endDate">
+                            To
+                        </label>
+
+                        <input
+                            type="date"
+                            id="endDate"
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="history-apply-btn"
+                        id="applyDateRange"
+                    >
+                        Apply
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SUMMARY
+            ================================================== -->
+
+            <section class="history-summary-grid">
+
+
+                <!-- TOTAL READINGS -->
+
+                <div class="history-summary-card">
+
+                    <div class="history-summary-label">
+                        Total Readings
+                    </div>
+
+                    <div
+                        class="history-summary-value"
+                        id="totalReadings"
+                    >
+                        0
+                    </div>
+
+                    <div class="history-summary-note">
+                        Recorded in selected period
+                    </div>
+
+                </div>
+
+
+                <!-- TEMPERATURE -->
+
+                <div class="history-summary-card">
+
+                    <div class="history-summary-label">
+                        Temperature
+                    </div>
+
+                    <div
+                        class="history-summary-value"
+                        id="averageTemperature"
+                    >
+                        --
+                    </div>
+
+                    <div class="history-summary-note">
+                        Average °C
+                    </div>
+
+                </div>
+
+
+                <!-- FALL EVENTS -->
+
+                <div class="history-summary-card">
+
+                    <div class="history-summary-label">
+                        Fall Events
+                    </div>
+
+                    <div
+                        class="history-summary-value"
+                        id="fallEvents"
+                    >
+                        0
+                    </div>
+
+                    <div class="history-summary-note">
+                        Recorded events
+                    </div>
+
+                </div>
+
+
+                <!-- POSITION EVENTS -->
+
+                <div class="history-summary-card">
+
+                    <div class="history-summary-label">
+                        Position Events
+                    </div>
+
+                    <div
+                        class="history-summary-value"
+                        id="positionEvents"
+                    >
+                        0
+                    </div>
+
+                    <div class="history-summary-note">
+                        Recorded changes
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TEMPERATURE TREND
+            ================================================== -->
+
+            <section class="history-chart-card">
+
+
+                <div class="history-chart-header">
+
+                    <div>
+
+                        <h3>
+                            Temperature Trend
+                        </h3>
+
+                        <p>
+                            Temperature readings across
+                            the selected period.
+                        </p>
+
+                    </div>
+
+
+                    <span
+                        class="history-chart-range"
+                        id="temperatureRange"
+                    >
+                        Selected period
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="history-chart"
+                    id="temperatureChart"
+                >
+
+                    <div class="history-chart-empty">
+
+                        <div>
+
+                            <strong>
+                                Loading chart data...
+                            </strong>
+
+                            <span>
+                                Recorded readings will appear here.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MOVEMENT TREND
+            ================================================== -->
+
+            <section class="history-chart-card">
+
+
+                <div class="history-chart-header">
+
+                    <div>
+
+                        <h3>
+                            Movement Trend
+                        </h3>
+
+                        <p>
+                            Gyroscope X, Y, and Z readings.
+                        </p>
+
+                    </div>
+
+
+                    <span
+                        class="history-chart-range"
+                        id="movementRange"
+                    >
+                        Selected period
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="history-chart"
+                    id="movementChart"
+                >
+
+                    <div class="history-chart-empty">
+
+                        <div>
+
+                            <strong>
+                                Loading chart data...
+                            </strong>
+
+                            <span>
+                                Movement readings will appear here.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FLUID LEVEL TREND
+            ================================================== -->
+
+            <section class="history-chart-card">
+
+
+                <div class="history-chart-header">
+
+                    <div>
+
+                        <h3>
+                            Fluid Level Trends
+                        </h3>
+
+                        <p>
+                            Urine and IV distance readings.
+                        </p>
+
+                    </div>
+
+
+                    <span
+                        class="history-chart-range"
+                        id="fluidRange"
+                    >
+                        Selected period
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="history-chart"
+                    id="fluidChart"
+                >
+
+                    <div class="history-chart-empty">
+
+                        <div>
+
+                            <strong>
+                                Loading chart data...
+                            </strong>
+
+                            <span>
+                                Fluid readings will appear here.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SENSOR HISTORY TABLE
+            ================================================== -->
+
+            <section class="history-table-card">
+
+
+                <div class="history-table-header">
+
+                    <div>
+
+                        <h3>
+                            Sensor Reading History
+                        </h3>
+
+                        <p>
+                            Individual readings recorded during
+                            the selected period.
+                        </p>
+
+                    </div>
+
+
+                    <span
+                        class="history-reading-count"
+                        id="readingCount"
+                    >
+                        0 readings
+                    </span>
+
+                </div>
+
+
+                <div class="history-table-wrapper">
+
+                    <table class="history-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Time
+                                </th>
+
+                                <th>
+                                    Temperature
+                                </th>
+
+                                <th>
+                                    Gyro X
+                                </th>
+
+                                <th>
+                                    Gyro Y
+                                </th>
+
+                                <th>
+                                    Gyro Z
+                                </th>
+
+                                <th>
+                                    Position
+                                </th>
+
+                                <th>
+                                    Duration
+                                </th>
+
+                                <th>
+                                    Fall
+                                </th>
+
+                                <th>
+                                    Urine
+                                </th>
+
+                                <th>
+                                    IV
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="historyTableBody">
+
+                            <tr>
+
+                                <td
+                                    colspan="10"
+                                    class="history-table-empty"
+                                >
+
+                                    <strong>
+                                        Loading history...
+                                    </strong>
+
+                                    <span>
+                                        Patient readings will appear
+                                        here when available.
+                                    </span>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="dashboard-footer">
+
+                ArogyaConnect Patient Care System
+
+            </footer>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/api.js"></script>
+
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/navigation.js"></script>
+
+    <script src="../js/history/patient-history.js"></script>
+
+    <script src="../js/history/patient-charts.js"></script>
+
+
+</body>
+
+</html>

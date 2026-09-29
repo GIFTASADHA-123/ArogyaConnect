@@ -1,0 +1,375 @@
+/*
+===========================================================
+ArogyaConnect Cards
+===========================================================
+*/
+
+
+.card {
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    box-shadow:
+        var(--shadow-sm);
+}
+
+
+.card-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding:
+        18px 20px;
+
+    border-bottom:
+        1px solid
+        var(--border);
+}
+
+
+.card-header-title {
+    margin: 0;
+
+    color:
+        var(--foreground);
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 15px;
+
+    font-weight: 700;
+}
+
+
+.card-header-subtitle {
+    margin-top: 3px;
+
+    color:
+        var(--muted-foreground);
+
+    font-size: 12px;
+}
+
+
+.card-body {
+    padding:
+        20px;
+}
+
+
+.card-footer {
+    padding:
+        14px 20px;
+
+    border-top:
+        1px solid
+        var(--border);
+}
+
+
+/* =======================================================
+   STAT CARD
+======================================================= */
+
+.stat-card {
+    min-width: 0;
+
+    padding:
+        18px;
+
+    background:
+        var(--card);
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    box-shadow:
+        var(--shadow-sm);
+
+    transition:
+        transform
+        var(--transition-fast),
+        box-shadow
+        var(--transition-fast);
+}
+
+
+.stat-card:hover {
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        var(--shadow-md);
+}
+
+
+.stat-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 14px;
+}
+
+
+.stat-card-icon {
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius:
+        var(--radius-sm);
+
+    font-size: 18px;
+}
+
+
+.stat-card-icon.teal {
+    color:
+        var(--primary-dark);
+
+    background:
+        var(--primary-light);
+}
+
+
+.stat-card-icon.green {
+    color:
+        var(--success-dark);
+
+    background:
+        var(--success-light);
+}
+
+
+.stat-card-icon.orange {
+    color:
+        var(--warning-dark);
+
+    background:
+        var(--warning-light);
+}
+
+
+.stat-card-icon.red {
+    color:
+        var(--danger-dark);
+
+    background:
+        var(--danger-light);
+}
+
+
+.stat-card-icon.blue {
+    color:
+        var(--info-dark);
+
+    background:
+        var(--info-light);
+}
+
+
+.stat-card-icon.purple {
+    color:
+        var(--purple-dark);
+
+    background:
+        var(--purple-light);
+}
+
+
+.stat-card-label {
+    color:
+        var(--muted-foreground);
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.stat-card-value {
+    margin: 0;
+
+    color:
+        var(--foreground);
+
+    font-family:
+        var(--font-heading);
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    line-height: 1.15;
+}
+
+
+.stat-card-unit {
+    margin-left: 3px;
+
+    color:
+        var(--muted-foreground);
+
+    font-family:
+        var(--font-body);
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+.stat-card-footer {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-top: 9px;
+
+    color:
+        var(--muted-foreground);
+
+    font-size: 11px;
+}
+
+
+/* =======================================================
+   STATUS BADGE
+======================================================= */
+
+.status-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    min-height: 25px;
+
+    padding:
+        0 9px;
+
+    border-radius:
+        999px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.status-badge.success {
+    color:
+        var(--success-dark);
+
+    background:
+        var(--success-light);
+}
+
+
+.status-badge.warning {
+    color:
+        var(--warning-dark);
+
+    background:
+        var(--warning-light);
+}
+
+
+.status-badge.danger {
+    color:
+        var(--danger-dark);
+
+    background:
+        var(--danger-light);
+}
+
+
+.status-badge.info {
+    color:
+        var(--info-dark);
+
+    background:
+        var(--info-light);
+}
+
+
+.status-badge.neutral {
+    color:
+        var(--muted-foreground);
+
+    background:
+        var(--secondary);
+}
+
+
+/* =======================================================
+   DOT
+======================================================= */
+
+.status-dot {
+    width: 7px;
+
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius:
+        50%;
+}
+
+
+.status-dot.online {
+    background:
+        var(--online);
+}
+
+
+.status-dot.warning {
+    background:
+        var(--warning);
+}
+
+
+.status-dot.danger {
+    background:
+        var(--danger);
+}
+
+
+.status-dot.offline {
+    background:
+        var(--offline);
+}

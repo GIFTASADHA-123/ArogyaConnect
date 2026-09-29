@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="ArogyaConnect Staff Profile"
+    >
+
+    <title>
+        Profile | ArogyaConnect
+    </title>
+
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/sidebar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/responsive.css"
+    >
+
+    <!-- MUST BE LAST -->
+    <link
+        rel="stylesheet"
+        href="../css/layout.css"
+    >
+
+
+    <style>
+
+        /* =================================================
+           PROFILE PAGE
+        ================================================== */
+
+        .profile-content {
+            width: 100%;
+            max-width: 1500px;
+
+            margin: 0 auto;
+
+            padding: 28px 30px 40px;
+        }
+
+
+        /* =================================================
+           PAGE HEADING
+        ================================================== */
+
+        .profile-page-heading {
+            margin-bottom: 20px;
+        }
+
+
+        .profile-page-heading .eyebrow {
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: var(--primary);
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: .1em;
+
+            text-transform: uppercase;
+        }
+
+
+        .profile-page-heading h2 {
+            margin: 0;
+
+            color: var(--foreground);
+
+            font-family: var(--font-heading);
+
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+
+        .profile-page-heading p {
+            max-width: 650px;
+
+            margin: 7px 0 0;
+
+            color: var(--muted-foreground);
+
+            font-size: 12px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =================================================
+           PROFILE HERO
+        ================================================== */
+
+        .profile-hero {
+            display: flex;
+            align-items: center;
+
+            gap: 16px;
+
+            padding: 22px;
+
+            margin-bottom: 18px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-lg);
+
+            background: var(--card);
+
+            box-shadow: var(--shadow-sm);
+        }
+
+
+        .profile-hero-avatar {
+            width: 68px;
+            height: 68px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 18px;
+
+            background: var(--primary-light);
+
+            color: var(--primary-dark);
+
+            font-family: var(--font-heading);
+
+            font-size: 25px;
+
+            font-weight: 800;
+        }
+
+
+        .profile-hero-details {
+            min-width: 0;
+        }
+
+
+        .profile-hero-details h3 {
+            margin: 0;
+
+            color: var(--foreground);
+
+            font-family: var(--font-heading);
+
+            font-size: 20px;
+
+            font-weight: 800;
+        }
+
+
+        .profile-hero-details p {
+            margin: 5px 0 9px;
+
+            color: var(--muted-foreground);
+
+            font-size: 11px;
+        }
+
+
+        .profile-role-badge {
+            display: inline-flex;
+            align-items: center;
+
+            gap: 7px;
+
+            min-height: 27px;
+
+            padding: 0 10px;
+
+            border-radius: 999px;
+
+            background: var(--success-light);
+
+            color: var(--success-dark);
+
+            font-size: 10px;
+
+            font-weight: 800;
+        }
+
+
+        .profile-role-dot {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: var(--success);
+        }
+
+
+        /* =================================================
+           PROFILE GRID
+        ================================================== */
+
+        .profile-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+
+        /* =================================================
+           PROFILE CARD
+        ================================================== */
+
+        .profile-card {
+            min-width: 0;
+
+            padding: 20px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-lg);
+
+            background: var(--card);
+
+            box-shadow: var(--shadow-sm);
+        }
+
+
+        .profile-card-header {
+            padding-bottom: 14px;
+
+            margin-bottom: 16px;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .profile-card-header h3 {
+            margin: 0;
+
+            color: var(--foreground);
+
+            font-family: var(--font-heading);
+
+            font-size: 14px;
+
+            font-weight: 800;
+        }
+
+
+        .profile-card-header p {
+            margin: 5px 0 0;
+
+            color: var(--muted-foreground);
+
+            font-size: 10px;
+
+            line-height: 1.6;
+        }
+
+
+        /* =================================================
+           PROFILE FIELDS
+        ================================================== */
+
+        .profile-fields {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 15px;
+        }
+
+
+        .profile-field {
+            min-width: 0;
+        }
+
+
+        .profile-field.full-width {
+            grid-column: 1 / -1;
+        }
+
+
+        .profile-field label {
+            display: block;
+
+            margin-bottom: 6px;
+
+            color: var(--muted-foreground);
+
+            font-size: 10px;
+
+            font-weight: 600;
+        }
+
+
+        .profile-field-value {
+            min-height: 40px;
+
+            display: flex;
+            align-items: center;
+
+            padding: 9px 11px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-sm);
+
+            background: var(--background);
+
+            color: var(--foreground);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            line-height: 1.5;
+
+            overflow-wrap: anywhere;
+        }
+
+
+        .profile-field-value.secondary {
+            color: var(--muted-foreground);
+
+            font-weight: 600;
+
+            font-family: var(--font-body);
+        }
+
+
+        /* =================================================
+           ROLE / ACCESS
+        ================================================== */
+
+        .profile-role-info {
+            min-height: 130px;
+
+            display: flex;
+            align-items: flex-start;
+
+            gap: 13px;
+
+            padding: 14px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-sm);
+
+            background: var(--background);
+        }
+
+
+        .profile-role-icon {
+            width: 38px;
+            height: 38px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: var(--primary-light);
+
+            color: var(--primary-dark);
+        }
+
+
+        .profile-role-icon svg {
+            width: 19px;
+            height: 19px;
+        }
+
+
+        .profile-role-text {
+            min-width: 0;
+        }
+
+
+        .profile-role-text h4 {
+            margin: 1px 0 5px;
+
+            color: var(--foreground);
+
+            font-family: var(--font-heading);
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+
+        .profile-role-text p {
+            margin: 0;
+
+            color: var(--muted-foreground);
+
+            font-size: 11px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =================================================
+           SECURITY
+        ================================================== */
+
+        .profile-security-card {
+            grid-column: 1 / -1;
+        }
+
+
+        .profile-security-content {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 14px;
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-sm);
+
+            background: var(--background);
+        }
+
+
+        .profile-security-description {
+            min-width: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+        }
+
+
+        .profile-security-icon {
+            width: 40px;
+            height: 40px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: var(--danger-light);
+
+            color: var(--danger);
+        }
+
+
+        .profile-security-icon svg {
+            width: 19px;
+            height: 19px;
+        }
+
+
+        .profile-security-description h4 {
+            margin: 0 0 4px;
+
+            color: var(--foreground);
+
+            font-family: var(--font-heading);
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+
+        .profile-security-description p {
+            max-width: 600px;
+
+            margin: 0;
+
+            color: var(--muted-foreground);
+
+            font-size: 10px;
+
+            line-height: 1.6;
+        }
+
+
+        .profile-signout-btn {
+            min-height: 40px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            flex-shrink: 0;
+
+            padding: 0 17px;
+
+            border: 1px solid var(--danger);
+
+            border-radius: var(--radius-sm);
+
+            background: var(--card);
+
+            color: var(--danger);
+
+            font-family: var(--font-body);
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            white-space: nowrap;
+
+            cursor: pointer;
+
+            transition:
+                background .2s ease,
+                color .2s ease;
+        }
+
+
+        .profile-signout-btn:hover {
+            background: var(--danger-light);
+        }
+
+
+        .profile-signout-btn svg {
+            width: 15px;
+            height: 15px;
+        }
+
+
+        /* =================================================
+           FOOTER
+        ================================================== */
+
+        .profile-footer {
+            margin-top: 28px;
+
+            color: var(--text-light);
+
+            font-size: 10px;
+
+            text-align: center;
+        }
+
+
+        /* =================================================
+           RESPONSIVE
+        ================================================== */
+
+        @media (max-width: 1000px) {
+
+            .profile-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .profile-security-card {
+                grid-column: auto;
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .profile-content {
+                padding: 22px 18px 32px;
+            }
+
+
+            .profile-hero {
+                padding: 20px;
+            }
+
+
+            .profile-card {
+                padding: 18px;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .profile-fields {
+                grid-template-columns: 1fr;
+            }
+
+
+            .profile-field.full-width {
+                grid-column: auto;
+            }
+
+
+            .profile-security-content {
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+
+            .profile-signout-btn {
+                width: 100%;
+            }
+
+        }
+
+
+        @media (max-width: 520px) {
+
+            .profile-hero {
+                align-items: flex-start;
+
+                gap: 14px;
+            }
+
+
+            .profile-hero-avatar {
+                width: 58px;
+                height: 58px;
+
+                border-radius: 14px;
+
+                font-size: 23px;
+            }
+
+
+            .profile-hero-details h3 {
+                font-size: 17px;
+            }
+
+
+            .profile-security-description {
+                align-items: flex-start;
+            }
+
+        }
+
+
+        @media (max-width: 420px) {
+
+            .profile-content {
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+
+            .profile-hero {
+                padding: 16px;
+            }
+
+
+            .profile-card {
+                padding: 16px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="dashboard-page profile-page">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <!-- BRAND -->
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-brand-mark">
+                A
+            </div>
+
+            <div class="sidebar-brand-text">
+
+                <strong>
+                    ArogyaConnect
+                </strong>
+
+                <span>
+                    Patient Care
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR CONTENT -->
+
+        <div class="sidebar-content">
+
+
+            <!-- MAIN -->
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-section-title">
+                    Main
+                </span>
+
+
+                <nav class="sidebar-nav">
+
+
+                    <!-- NURSE DASHBOARD -->
+
+                    <a
+                        href="nurse-dashboard.html"
+                        class="sidebar-nav-item"
+                        data-nurse-only
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+
+                            <rect
+                                x="3"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="3"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <!-- DOCTOR DASHBOARD -->
+
+                    <a
+                        href="doctor-dashboard.html"
+                        class="sidebar-nav-item"
+                        data-doctor-only
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+
+                            <rect
+                                x="3"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="3"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="3"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                            <rect
+                                x="14"
+                                y="14"
+                                width="7"
+                                height="7"
+                                rx="1"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+
+                    <!-- PATIENT MONITORING -->
+
+                    <a
+                        href="patient-monitor.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+
+                            <path
+                                d="M3 12h4l2-7 4 14 2-7h6"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Patient Monitoring
+                        </span>
+
+                    </a>
+
+
+                    <!-- PATIENT HISTORY -->
+
+                    <a
+                        href="patient-history.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+
+                            <path
+                                d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"
+                            />
+
+                            <path
+                                d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Patient History
+                        </span>
+
+                    </a>
+
+
+                    <!-- ALERTS -->
+
+                    <a
+                        href="alerts.html"
+                        class="sidebar-nav-item"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+
+                            <path
+                                d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                            />
+
+                            <path
+                                d="M13.73 21a2 2 0 0 1-3.46 0"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Alerts
+                        </span>
+
+                        <span
+                            class="sidebar-alert-count"
+                            id="alertCount"
+                            style="display:none;"
+                        >
+                            0
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+            <!-- ACCOUNT -->
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-section-title">
+                    Account
+                </span>
+
+
+                <nav class="sidebar-nav">
+
+                    <a
+                        href="profile.html"
+                        class="sidebar-nav-item active"
+                    >
+
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+
+                            <circle
+                                cx="12"
+                                cy="8"
+                                r="4"
+                            />
+
+                            <path
+                                d="M4 21a8 8 0 0 1 16 0"
+                            />
+
+                        </svg>
+
+                        <span>
+                            Profile
+                        </span>
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIDEBAR FOOTER -->
+
+        <div class="sidebar-footer">
+
+            <div class="sidebar-staff-card">
+
+                <div
+                    class="sidebar-user-avatar"
+                    id="sidebarUserAvatar"
+                >
+                    S
+                </div>
+
+
+                <div class="sidebar-user-info">
+
+                    <strong id="sidebarUserName">
+                        Staff
+                    </strong>
+
+                    <span id="sidebarUserRole">
+                        Medical Staff
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="sidebar-logout"
+                id="logoutButton"
+            >
+
+                <span>
+                    ↪
+                </span>
+
+                <span>
+                    Sign out
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MOBILE OVERLAY -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="dashboard-main">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                    aria-controls="sidebar"
+                    aria-expanded="false"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+
+                        <line
+                            x1="4"
+                            y1="6"
+                            x2="20"
+                            y2="6"
+                        />
+
+                        <line
+                            x1="4"
+                            y1="12"
+                            x2="20"
+                            y2="12"
+                        />
+
+                        <line
+                            x1="4"
+                            y1="18"
+                            x2="20"
+                            y2="18"
+                        />
+
+                    </svg>
+
+                </button>
+
+
+                <div>
+
+                    <span class="dashboard-header-label">
+                        AROGYACONNECT
+                    </span>
+
+                    <h1>
+                        My Profile
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-header-right">
+
+
+                <!-- DATE -->
+
+                <div class="dashboard-date">
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+
+                        <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                        />
+
+                        <line
+                            x1="16"
+                            y1="2"
+                            x2="16"
+                            y2="6"
+                        />
+
+                        <line
+                            x1="8"
+                            y1="2"
+                            x2="8"
+                            y2="6"
+                        />
+
+                        <line
+                            x1="3"
+                            y1="10"
+                            x2="21"
+                            y2="10"
+                        />
+
+                    </svg>
+
+                    <span id="currentDate">
+                        Loading date...
+                    </span>
+
+                </div>
+
+
+                <!-- USER -->
+
+                <div class="header-user">
+
+                    <div
+                        class="header-user-avatar"
+                        id="headerUserAvatar"
+                    >
+                        S
+                    </div>
+
+
+                    <div class="header-user-info">
+
+                        <strong id="headerUserName">
+                            Staff
+                        </strong>
+
+                        <span id="headerUserRole">
+                            Medical Staff
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PROFILE CONTENT
+        ================================================== -->
+
+        <div class="profile-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <section class="profile-page-heading">
+
+                <span class="eyebrow">
+                    Staff Account
+                </span>
+
+                <h2>
+                    My Profile
+                </h2>
+
+                <p>
+                    View your ArogyaConnect account
+                    information and assigned access role.
+                </p>
+
+            </section>
+
+
+            <!-- PROFILE HERO -->
+
+            <section class="profile-hero">
+
+                <div
+                    class="profile-hero-avatar"
+                    id="profileAvatar"
+                >
+                    S
+                </div>
+
+
+                <div class="profile-hero-details">
+
+                    <h3 id="profileUsername">
+                        Loading...
+                    </h3>
+
+                    <p>
+                        Authorized ArogyaConnect Staff
+                    </p>
+
+
+                    <span class="profile-role-badge">
+
+                        <span class="profile-role-dot"></span>
+
+                        <span id="profileRoleBadge">
+                            Medical Staff
+                        </span>
+
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PROFILE GRID
+            ================================================== -->
+
+            <div class="profile-grid">
+
+
+                <!-- ACCOUNT INFORMATION -->
+
+                <section class="profile-card">
+
+                    <div class="profile-card-header">
+
+                        <h3>
+                            Account Information
+                        </h3>
+
+                        <p>
+                            Details associated with your
+                            registered account.
+                        </p>
+
+                    </div>
+
+
+                    <div class="profile-fields">
+
+
+                        <div class="profile-field">
+
+                            <label>
+                                Username
+                            </label>
+
+                            <div
+                                class="profile-field-value"
+                                id="profileUsernameField"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-field">
+
+                            <label>
+                                Staff Role
+                            </label>
+
+                            <div
+                                class="profile-field-value"
+                                id="profileRoleField"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div class="profile-field full-width">
+
+                            <label>
+                                Account ID
+                            </label>
+
+                            <div
+                                class="profile-field-value secondary"
+                                id="profileUserId"
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ROLE & ACCESS -->
+
+                <section class="profile-card">
+
+                    <div class="profile-card-header">
+
+                        <h3>
+                            Role & Access
+                        </h3>
+
+                        <p>
+                            Information about your
+                            assigned staff role.
+                        </p>
+
+                    </div>
+
+
+                    <div class="profile-role-info">
+
+                        <div class="profile-role-icon">
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+
+                                <path
+                                    d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                                />
+
+                                <path
+                                    d="M9 12l2 2 4-4"
+                                />
+
+                            </svg>
+
+                        </div>
+
+
+                        <div class="profile-role-text">
+
+                            <h4 id="profileAccessTitle">
+                                Staff Access
+                            </h4>
+
+                            <p id="profileAccessDescription">
+                                Your account provides access
+                                to ArogyaConnect patient care
+                                features according to your
+                                assigned role.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ACCOUNT SECURITY -->
+
+                <section
+                    class="profile-card profile-security-card"
+                >
+
+                    <div class="profile-card-header">
+
+                        <h3>
+                            Account Security
+                        </h3>
+
+                        <p>
+                            Keep your account secure and
+                            sign out when you finish your work.
+                        </p>
+
+                    </div>
+
+
+                    <div class="profile-security-content">
+
+
+                        <div class="profile-security-description">
+
+
+                            <div class="profile-security-icon">
+
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+
+                                    <rect
+                                        x="4"
+                                        y="10"
+                                        width="16"
+                                        height="11"
+                                        rx="2"
+                                    />
+
+                                    <path
+                                        d="M8 10V7a4 4 0 0 1 8 0v3"
+                                    />
+
+                                </svg>
+
+                            </div>
+
+
+                            <div>
+
+                                <h4>
+                                    Sign out of your account
+                                </h4>
+
+                                <p>
+                                    End your current session
+                                    when you are no longer
+                                    using ArogyaConnect.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="profile-signout-btn"
+                            id="profileLogoutButton"
+                        >
+
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+
+                                <path
+                                    d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
+                                />
+
+                                <polyline
+                                    points="16 17 21 12 16 7"
+                                />
+
+                                <line
+                                    x1="21"
+                                    y1="12"
+                                    x2="9"
+                                    y2="12"
+                                />
+
+                            </svg>
+
+                            Sign Out
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <footer class="profile-footer">
+
+                ArogyaConnect Patient Care System
+
+            </footer>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/api.js"></script>
+
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/navigation.js"></script>
+
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* ==========================================
+                   AUTHENTICATION
+                ========================================== */
+
+                if (
+                    window.ArogyaAuth &&
+                    typeof window.ArogyaAuth
+                        .requireAuthentication === "function"
+                ) {
+
+                    window.ArogyaAuth
+                        .requireAuthentication();
+
+                }
+
+
+                /* ==========================================
+                   USER DATA
+                ========================================== */
+
+                const username =
+                    localStorage.getItem(
+                        "arogya_username"
+                    ) || "Staff";
+
+
+                const role =
+                    (
+                        localStorage.getItem(
+                            "arogya_role"
+                        ) || ""
+                    ).toLowerCase();
+
+
+                const userId =
+                    localStorage.getItem(
+                        "arogya_user_id"
+                    ) || "—";
+
+
+                let displayRole =
+                    "Medical Staff";
+
+
+                if (role === "doctor") {
+
+                    displayRole = "Doctor";
+
+                }
+                else if (role === "nurse") {
+
+                    displayRole = "Nurse";
+
+                }
+
+
+                const initial =
+                    username
+                        .trim()
+                        .charAt(0)
+                        .toUpperCase() || "S";
+
+
+                /* ==========================================
+                   HELPER
+                ========================================== */
+
+                function setText(
+                    id,
+                    value
+                ) {
+
+                    const element =
+                        document.getElementById(id);
+
+                    if (element) {
+
+                        element.textContent =
+                            value;
+
+                    }
+
+                }
+
+
+                /* ==========================================
+                   PROFILE
+                ========================================== */
+
+                setText(
+                    "profileUsername",
+                    username
+                );
+
+                setText(
+                    "profileUsernameField",
+                    username
+                );
+
+                setText(
+                    "profileRoleField",
+                    displayRole
+                );
+
+                setText(
+                    "profileRoleBadge",
+                    displayRole
+                );
+
+                setText(
+                    "profileUserId",
+                    userId
+                );
+
+                setText(
+                    "profileAvatar",
+                    initial
+                );
+
+
+                /* ==========================================
+                   HEADER
+                ========================================== */
+
+                setText(
+                    "headerUserName",
+                    username
+                );
+
+                setText(
+                    "headerUserRole",
+                    displayRole
+                );
+
+                setText(
+                    "headerUserAvatar",
+                    initial
+                );
+
+
+                /* ==========================================
+                   SIDEBAR
+                ========================================== */
+
+                setText(
+                    "sidebarUserName",
+                    username
+                );
+
+                setText(
+                    "sidebarUserRole",
+                    displayRole
+                );
+
+                setText(
+                    "sidebarUserAvatar",
+                    initial
+                );
+
+
+                /* ==========================================
+                   ROLE DESCRIPTION
+                ========================================== */
+
+                if (role === "nurse") {
+
+                    setText(
+                        "profileAccessTitle",
+                        "Nurse Access"
+                    );
+
+                    setText(
+                        "profileAccessDescription",
+                        "Your nurse account provides access to patient monitoring, alerts, and patient care information."
+                    );
+
+                }
+                else if (role === "doctor") {
+
+                    setText(
+                        "profileAccessTitle",
+                        "Doctor Access"
+                    );
+
+                    setText(
+                        "profileAccessDescription",
+                        "Your doctor account provides access to patient monitoring, clinical history, alerts, and patient care information."
+                    );
+
+                }
+
+
+                /* ==========================================
+                   ROLE-BASED DASHBOARD LINKS
+                ========================================== */
+
+                document
+                    .querySelectorAll(
+                        "[data-nurse-only]"
+                    )
+                    .forEach(
+                        function (element) {
+
+                            element.style.display =
+                                role === "nurse"
+                                    ? ""
+                                    : "none";
+
+                        }
+                    );
+
+
+                document
+                    .querySelectorAll(
+                        "[data-doctor-only]"
+                    )
+                    .forEach(
+                        function (element) {
+
+                            element.style.display =
+                                role === "doctor"
+                                    ? ""
+                                    : "none";
+
+                        }
+                    );
+
+
+                /* ==========================================
+                   DATE
+                ========================================== */
+
+                const today =
+                    new Date();
+
+
+                setText(
+                    "currentDate",
+
+                    today.toLocaleDateString(
+                        "en-IN",
+                        {
+                            day: "numeric",
+                            month: "short",
+                            year: "numeric"
+                        }
+                    )
+                );
+
+
+                /* ==========================================
+                   PROFILE SIGN OUT
+                ========================================== */
+
+                const profileLogoutButton =
+                    document.getElementById(
+                        "profileLogoutButton"
+                    );
+
+
+                if (profileLogoutButton) {
+
+                    profileLogoutButton
+                        .addEventListener(
+                            "click",
+                            function () {
+
+                                if (
+                                    window.ArogyaAuth &&
+                                    typeof window.ArogyaAuth
+                                        .logoutUser === "function"
+                                ) {
+
+                                    window.ArogyaAuth
+                                        .logoutUser();
+
+                                }
+                                else {
+
+                                    localStorage.removeItem(
+                                        "arogya_logged_in"
+                                    );
+
+                                    localStorage.removeItem(
+                                        "arogya_username"
+                                    );
+
+                                    localStorage.removeItem(
+                                        "arogya_role"
+                                    );
+
+                                    localStorage.removeItem(
+                                        "arogya_user_id"
+                                    );
+
+                                    localStorage.removeItem(
+                                        "arogya_access_token"
+                                    );
+
+                                    localStorage.removeItem(
+                                        "arogya_user"
+                                    );
+
+                                    window.location.href =
+                                        "login.html";
+
+                                }
+
+                            }
+                        );
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

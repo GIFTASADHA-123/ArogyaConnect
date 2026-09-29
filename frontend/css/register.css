@@ -1,0 +1,188 @@
+/* =========================================================
+   AROGYACONNECT REGISTER FORM
+   Same visual style as LOGIN page
+========================================================= */
+
+.register-role-section {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   REGISTER FORM
+========================================================= */
+
+.register-form {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+.register-form .form-group {
+    width: 100%;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.register-form .input-wrapper input {
+    width: 100%;
+    height: 52px;
+
+    padding-left: 43px;
+}
+
+
+/* =========================================================
+   PASSWORD SHOW BUTTON
+========================================================= */
+
+.register-form .password-toggle {
+    position: absolute;
+
+    right: 8px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    height: 32px;
+    min-width: 40px;
+
+    padding: 0 8px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: #0f766e;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.register-form .password-toggle:hover {
+    background: #ccfbf1;
+}
+
+
+/* =========================================================
+   REGISTER BUTTON
+========================================================= */
+
+.register-form .login-button {
+    width: 100%;
+
+    min-height: 52px;
+
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+#registerError {
+    width: 100%;
+
+    display: none;
+
+    padding: 10px 12px;
+
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+
+    background: #fef2f2;
+
+    color: #b91c1c;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+#registerError:not(:empty) {
+    display: block;
+}
+
+
+/* =========================================================
+   REGISTER SIGN-IN — CENTERED
+========================================================= */
+
+.register-signin {
+    width: 100% !important;
+
+    margin: 16px 0 0 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    flex-direction: row !important;
+
+    gap: 5px !important;
+
+    text-align: center !important;
+
+    font-family: var(--font-body);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.register-signin span {
+    display: inline-block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--muted-foreground);
+}
+
+.register-signin a {
+    display: inline-block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: var(--primary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+.register-signin a:hover {
+    color: var(--primary-dark);
+}
+
+
+/* =========================================================
+   REMOVE OLD BACK LINK IF STILL PRES
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .register-signin {
+        width: 100% !important;
+
+        margin-top: 14px !important;
+
+        justify-content: center !important;
+
+        text-align: center !important;
+    }
+
+}

@@ -1,0 +1,470 @@
+/* =========================================================
+   AROGYACONNECT
+   SIDEBAR
+========================================================= */
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    width: var(--sidebar-width);
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--card);
+
+    border-right: 1px solid var(--border);
+
+    box-shadow: var(--shadow-sm);
+
+    overflow: hidden;
+
+    transition:
+        transform var(--transition-slow),
+        box-shadow var(--transition-slow);
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.sidebar-brand {
+    height: var(--header-height);
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 18px;
+
+    flex-shrink: 0;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.sidebar-brand-mark {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+    background: var(--primary);
+
+    border-radius: 9px;
+
+    font-family: var(--font-heading);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    box-shadow:
+        0 4px 10px
+        rgba(15, 118, 110, 0.18);
+}
+
+.sidebar-brand-text {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.sidebar-brand-text strong {
+    color: var(--foreground);
+
+    font-family: var(--font-heading);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.sidebar-brand-text span {
+    color: var(--muted-foreground);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SIDEBAR CONTENT
+========================================================= */
+
+.sidebar-content {
+    flex: 1;
+
+    min-height: 0;
+
+    padding: 20px 12px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   SIDEBAR SECTION
+========================================================= */
+
+.sidebar-section {
+    margin-bottom: 24px;
+}
+
+.sidebar-section:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-section-title {
+    display: block;
+
+    padding: 0 10px;
+    margin: 0 0 8px;
+
+    color: var(--text-light);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.sidebar-nav-item,
+.sidebar .nav-link,
+.sidebar a.nav-link {
+    position: relative;
+
+    width: 100%;
+    min-height: 42px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 11px;
+
+    color: var(--muted-foreground);
+
+    background: transparent;
+
+    border-radius: var(--radius-sm);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+.sidebar-nav-item:hover,
+.sidebar .nav-link:hover {
+    color: var(--primary);
+    background: var(--secondary);
+}
+
+.sidebar-nav-item.active,
+.sidebar .nav-link.active {
+    color: var(--primary);
+
+    background: var(--primary-light);
+
+    font-weight: 700;
+}
+
+.sidebar-nav-item.active::before,
+.sidebar .nav-link.active::before {
+    position: absolute;
+
+    top: 50%;
+    left: 0;
+
+    width: 3px;
+    height: 22px;
+
+    content: "";
+
+    background: var(--primary);
+
+    border-radius: 0 4px 4px 0;
+
+    transform: translateY(-50%);
+}
+
+.sidebar-nav-item svg,
+.sidebar .nav-link svg {
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+}
+
+.sidebar-nav-label {
+    min-width: 0;
+    flex: 1;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   ALERT COUNT
+========================================================= */
+
+.sidebar-alert-count {
+    min-width: 21px;
+    height: 21px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 6px;
+
+    color: var(--danger-dark);
+    background: var(--danger-light);
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.sidebar-divider {
+    height: 1px;
+
+    margin: 4px 8px 18px;
+
+    background: var(--border);
+}
+
+
+/* =========================================================
+   SIDEBAR FOOTER
+========================================================= */
+
+.sidebar-footer {
+    flex-shrink: 0;
+
+    padding: 12px;
+
+    border-top: 1px solid var(--border);
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   STAFF CARD
+========================================================= */
+
+.sidebar-staff-card {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px;
+
+    margin-bottom: 8px;
+
+    background: #f8fafc;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.sidebar-staff-avatar,
+.sidebar-user-avatar {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--primary-dark);
+    background: var(--primary-light);
+
+    border: 1px solid #99f6e4;
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.sidebar-staff-info {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-staff-info strong {
+    overflow: hidden;
+
+    color: var(--foreground);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sidebar-staff-info span {
+    margin-top: 1px;
+
+    color: var(--muted-foreground);
+
+    font-size: 10px;
+}
+
+.sidebar-staff-status {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    background: var(--success);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.sidebar-logout {
+    width: 100%;
+    min-height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 10px;
+
+    padding: 0 11px;
+
+    color: var(--muted-foreground);
+
+    background: transparent;
+
+    border-radius: var(--radius-sm);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-align: left;
+
+    transition:
+        background var(--transition),
+        color var(--transition);
+}
+
+.sidebar-logout:hover {
+    color: var(--danger);
+    background: var(--danger-light);
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.sidebar-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 950;
+
+    display: none;
+
+    background: rgba(15, 23, 42, 0.42);
+
+    backdrop-filter: blur(2px);
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+
+/* =========================================================
+   MOBILE SIDEBAR
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.sidebar-open {
+        transform: translateX(0);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .sidebar-overlay {
+        display: none;
+    }
+
+    .sidebar-overlay.active {
+        display: block;
+    }
+}

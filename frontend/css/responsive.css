@@ -1,0 +1,114 @@
+/* =========================================================
+   AROGYACONNECT
+   GLOBAL RESPONSIVE STYLES
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .dashboard-content,
+    .main-content {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .dashboard-header,
+    .top-navbar {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 250px !important;
+
+        transform: translateX(-100%) !important;
+
+        box-shadow: var(--shadow-lg);
+    }
+
+    .sidebar.sidebar-open {
+        transform: translateX(0) !important;
+    }
+
+
+    .dashboard-main,
+    .main-wrapper {
+        width: 100% !important;
+
+        margin-left: 0 !important;
+    }
+
+
+    .dashboard-header,
+    .top-navbar {
+        left: 0 !important;
+
+        width: 100% !important;
+    }
+
+
+    .mobile-menu-btn {
+        display: flex !important;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .sidebar-overlay {
+        display: none;
+    }
+
+    .sidebar-overlay.active {
+        display: block;
+    }
+
+
+    .dashboard-content,
+    .main-content {
+        padding: 22px 18px 32px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .dashboard-header,
+    .top-navbar {
+        height: 64px;
+    }
+
+
+    .dashboard-main,
+    .main-wrapper {
+        padding-top: 64px !important;
+    }
+
+
+    .dashboard-content,
+    .main-content {
+        padding: 18px 14px 28px;
+    }
+
+
+    .header-user-info,
+    .navbar-user-details {
+        display: none;
+    }
+}

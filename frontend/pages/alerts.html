@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Alerts | ArogyaConnect</title>
+
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         COMMON CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="../css/variables.css">
+
+    <link rel="stylesheet" href="../css/main.css">
+
+    <link rel="stylesheet" href="../css/navbar.css">
+
+    <link rel="stylesheet" href="../css/sidebar.css">
+
+    <link rel="stylesheet" href="../css/cards.css">
+
+
+    <!-- =====================================================
+         PAGE CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="../css/alerts.css">
+
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- Common layout must load last -->
+
+    <link rel="stylesheet" href="../css/layout.css">
+
+</head>
+
+
+<body class="dashboard-page alerts-page-body">
+
+
+<div class="app-shell">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+    class="sidebar"
+    id="sidebar"
+>
+
+    <!-- =====================================================
+         SIDEBAR BRAND
+    ====================================================== -->
+
+    <div class="sidebar-brand">
+
+        <div class="sidebar-brand-mark">
+            A
+        </div>
+
+        <div class="sidebar-brand-text">
+
+            <strong>
+                ArogyaConnect
+            </strong>
+
+            <span>
+                Patient Care
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR CONTENT
+    ====================================================== -->
+
+    <div class="sidebar-content">
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
+
+        <div class="sidebar-section">
+
+            <span class="sidebar-section-title">
+                Main
+            </span>
+
+
+            <nav class="sidebar-nav">
+
+                <!-- Nurse Dashboard -->
+
+                <a
+                    href="nurse-dashboard.html"
+                    class="sidebar-nav-item"
+                    data-nurse-only
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="3"
+                            width="7"
+                            height="7"
+                            rx="1"
+                        />
+
+                        <rect
+                            x="14"
+                            y="3"
+                            width="7"
+                            height="7"
+                            rx="1"
+                        />
+
+                        <rect
+                            x="3"
+                            y="14"
+                            width="7"
+                            height="7"
+                            rx="1"
+                        />
+
+                        <rect
+                            x="14"
+                            y="14"
+                            width="7"
+                            height="7"
+                            rx="1"
+                        />
+
+                    </svg>
+
+
+                    <span class="sidebar-nav-label">
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- Doctor Dashboard -->
+
+                <a
+                    href="doctor-dashboard.html"
+                    class="sidebar-nav-item"
+                    data-doctor-only
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="3"
+                            width="7"
+                            height="7"
+                            rx="1"
+                        />
+
+                        <rect
+                            x="14"
+                            y="3"
+                            width="7"
+                            height="7"
+                            rx="1"
+                        />
+
+                        <rect
+                            x="3"
+                            y="14"
+                            width="7"
+                            height="7"
+                            rx="1"
+                        />
+
+                        <rect
+                            x="14"
+                            y="14"
+                            width="7"
+                            height="7"
+                            rx="1"
+                        />
+
+                    </svg>
+
+
+                    <span class="sidebar-nav-label">
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <!-- Patient Monitoring -->
+
+                <a
+                    href="patient-monitor.html"
+                    class="sidebar-nav-item"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+
+                        <path
+                            d="M3 12h4l2-7 4 14 2-7h6"
+                        />
+
+                    </svg>
+
+
+                    <span class="sidebar-nav-label">
+                        Patient Monitoring
+                    </span>
+
+                </a>
+
+
+                <!-- Patient History -->
+
+                <a
+                    href="patient-history.html"
+                    class="sidebar-nav-item"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+
+                        <path
+                            d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"
+                        />
+
+                        <path
+                            d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                        />
+
+                    </svg>
+
+
+                    <span class="sidebar-nav-label">
+                        Patient History
+                    </span>
+
+                </a>
+
+
+                <!-- Alerts -->
+
+                <a
+                    href="alerts.html"
+                    class="sidebar-nav-item active"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+
+                        <path
+                            d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"
+                        />
+
+                        <path
+                            d="M13.73 21a2 2 0 0 1-3.46 0"
+                        />
+
+                    </svg>
+
+
+                    <span class="sidebar-nav-label">
+                        Alerts
+                    </span>
+
+
+                    <span
+                        class="sidebar-alert-count"
+                        id="alertCount"
+                    >
+                        0
+                    </span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+
+        <!-- =================================================
+             ACCOUNT
+        ================================================== -->
+
+        <div class="sidebar-section">
+
+            <span class="sidebar-section-title">
+                Account
+            </span>
+
+
+            <nav class="sidebar-nav">
+
+                <a
+                    href="profile.html"
+                    class="sidebar-nav-item"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                    >
+
+                        <circle
+                            cx="12"
+                            cy="8"
+                            r="3"
+                        />
+
+                        <path
+                            d="M5 21c.8-4.2 3-6.5 7-6.5s6.2 2.3 7 6.5"
+                        />
+
+                    </svg>
+
+
+                    <span class="sidebar-nav-label">
+                        Profile
+                    </span>
+
+                </a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SIDEBAR FOOTER
+    ====================================================== -->
+
+    <div class="sidebar-footer">
+
+        <div class="sidebar-staff-card">
+
+            <div
+                class="sidebar-user-avatar"
+                id="sidebarUserAvatar"
+            >
+                S
+            </div>
+
+
+            <div class="sidebar-user-info">
+
+                <strong id="sidebarUserName">
+                    Staff
+                </strong>
+
+
+                <span id="sidebarUserRole">
+                    Medical Staff
+                </span>
+
+            </div>
+
+
+            <span
+                class="sidebar-staff-status"
+            ></span>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="sidebar-logout"
+            id="logoutButton"
+            data-logout
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                width="18"
+                height="18"
+                aria-hidden="true"
+            >
+
+                <path
+                    d="M10 17l5-5-5-5"
+                />
+
+                <path
+                    d="M15 12H3"
+                />
+
+                <path
+                    d="M21 19V5a2 2 0 0 0-2-2h-6"
+                />
+
+            </svg>
+
+
+            <span>
+                Sign out
+            </span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+    <!-- =====================================================
+         MOBILE SIDEBAR OVERLAY
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <div class="main-wrapper">
+
+
+        <!-- =================================================
+             NAVBAR
+        ================================================== -->
+
+        <header class="top-navbar">
+
+
+            <div class="navbar-left">
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                    aria-controls="sidebar"
+                    aria-expanded="false"
+                >
+                    ☰
+                </button>
+
+
+                <div class="navbar-page-title">
+                    Alerts
+                </div>
+
+            </div>
+
+
+            <div class="navbar-right">
+
+
+                <div class="navbar-user">
+
+                    <div
+                        class="navbar-user-avatar"
+                        id="headerUserAvatar"
+                    >
+                        S
+                    </div>
+
+
+                    <div class="navbar-user-details">
+
+                        <strong id="headerUserName">
+                            Staff
+                        </strong>
+
+                        <span id="headerUserRole">
+                            Medical Staff
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTENT
+        ================================================== -->
+
+        <main class="main-content alerts-page">
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <section class="alerts-header">
+
+
+                <div>
+
+                    <div class="page-breadcrumb">
+                        Patient Care / Alerts
+                    </div>
+
+
+                    <h1>
+                        Patient Alerts
+                    </h1>
+
+
+                    <p>
+                        Review and acknowledge alerts generated
+                        from patient monitoring.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="refreshAlerts"
+                >
+                    ↻ Refresh
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 ERROR
+            ================================================== -->
+
+            <div
+                class="alerts-error"
+                id="alertsError"
+                style="display:none;"
+            >
+
+                <strong>
+                    Unable to load alerts.
+                </strong>
+
+                <span id="alertsErrorMessage">
+                    Please try again.
+                </span>
+
+            </div>
+
+
+            <!-- =================================================
+                 SUMMARY CARDS
+            ================================================== -->
+
+            <section class="alert-summary-grid">
+
+
+                <!-- TOTAL ALERTS -->
+
+                <div class="alert-summary-card">
+
+                    <div class="alert-summary-icon total">
+                        !
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Total Alerts
+                        </span>
+
+                        <strong id="totalAlerts">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOS ALERTS -->
+
+                <div class="alert-summary-card sos-summary">
+
+                    <div class="alert-summary-icon sos">
+                        SOS
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            SOS Alerts
+                        </span>
+
+                        <strong id="sosAlerts">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- DANGER -->
+
+                <div class="alert-summary-card danger-summary">
+
+                    <div class="alert-summary-icon danger">
+                        !
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Danger
+                        </span>
+
+                        <strong id="dangerAlerts">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ATTENTION -->
+
+                <div class="alert-summary-card warning-summary">
+
+                    <div class="alert-summary-icon warning">
+                        !
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Attention
+                        </span>
+
+                        <strong id="warningAlerts">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACKNOWLEDGED -->
+
+                <div class="alert-summary-card">
+
+                    <div class="alert-summary-icon acknowledged">
+                        ✓
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Acknowledged
+                        </span>
+
+                        <strong id="acknowledgedAlerts">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FILTERS
+            ================================================== -->
+
+            <section class="alerts-toolbar">
+
+
+                <div class="alert-filter-group">
+
+
+                    <!-- ALL -->
+
+                    <button
+                        type="button"
+                        class="alert-filter active"
+                        data-filter="all"
+                    >
+                        All
+                    </button>
+
+
+                    <!-- SOS -->
+
+                    <button
+                        type="button"
+                        class="alert-filter sos-filter"
+                        data-filter="sos"
+                    >
+                        SOS Alerts
+                    </button>
+
+
+                    <!-- UNACKNOWLEDGED -->
+
+                    <button
+                        type="button"
+                        class="alert-filter"
+                        data-filter="unacknowledged"
+                    >
+                        Unacknowledged
+                    </button>
+
+
+                    <!-- DANGER -->
+
+                    <button
+                        type="button"
+                        class="alert-filter"
+                        data-filter="danger"
+                    >
+                        Danger
+                    </button>
+
+
+                    <!-- ATTENTION -->
+
+                    <button
+                        type="button"
+                        class="alert-filter"
+                        data-filter="warning"
+                    >
+                        Attention
+                    </button>
+
+
+                    <!-- ACKNOWLEDGED -->
+
+                    <button
+                        type="button"
+                        class="alert-filter"
+                        data-filter="acknowledged"
+                    >
+                        Acknowledged
+                    </button>
+
+                </div>
+
+
+                <div class="alerts-count-label">
+
+                    Showing
+
+                    <strong id="visibleAlertCount">
+                        0
+                    </strong>
+
+                    alerts
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ALERT LIST
+            ================================================== -->
+
+            <section class="alerts-list-section">
+
+
+                <div
+                    class="alerts-list"
+                    id="alertsList"
+                >
+
+                    <div class="alerts-loading">
+                        Loading alerts...
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     ACKNOWLEDGE MODAL
+========================================================== -->
+
+<div
+    class="alert-modal"
+    id="acknowledgeModal"
+    style="display:none;"
+>
+
+
+    <!-- BACKDROP -->
+
+    <div
+        class="alert-modal-backdrop"
+        id="acknowledgeModalBackdrop"
+    ></div>
+
+
+    <!-- MODAL -->
+
+    <div
+        class="alert-modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="acknowledgeModalTitle"
+    >
+
+
+        <div class="alert-modal-icon">
+            ✓
+        </div>
+
+
+        <h2 id="acknowledgeModalTitle">
+            Acknowledge Alert
+        </h2>
+
+
+        <p id="acknowledgeModalMessage">
+            Are you sure you want to acknowledge this alert?
+        </p>
+
+
+        <div class="alert-modal-actions">
+
+
+            <button
+                type="button"
+                class="btn btn-secondary"
+                id="cancelAcknowledge"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                type="button"
+                class="btn btn-primary"
+                id="confirmAcknowledge"
+            >
+                Acknowledge
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script src="../js/api.js"></script>
+
+<script src="../js/auth.js"></script>
+
+<script src="../js/navigation.js"></script>
+
+<script src="../js/alerts/alerts.js"></script>
+
+
+</body>
+
+</html>
